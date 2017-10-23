@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../../provider/http/http.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -11,7 +12,7 @@ export class HomeComponent implements OnInit {
 	banner : any;
   latest : any;
 
-  constructor(public httpServices: HttpService){
+  constructor(public httpServices: HttpService, public router: Router){
 
   }
 
