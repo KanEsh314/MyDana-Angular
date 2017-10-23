@@ -10,7 +10,7 @@
 						<button class="c-hamburger c-hamburger--htx"><span></span></button>
 						<ul>
 							<li>
-								<a href="">Utama</a>
+								<a href="#" type="button">Utama</a>
 							</li>
 							<li>
 								<a href="aboutus.htm">Tentang Kami</a>
@@ -37,7 +37,7 @@
 					</div>	
 
 					<div class="login login-button">
-						<a href="#" class="btn-primary">Login</a>
+						<a class="btn-primary">Login</a>
 					</div><!-- .login -->
 				</div><!--. right-header -->
 			</div><!-- .container -->
@@ -93,34 +93,36 @@
 			</div>
 			</div>
 			<!--end jumlah sumbangan-->
-			<div class="popular campaign">
+			<div class="popular campaign" >
 				<div class="container">
 					<h2 class="title wow fadeInUp" data-wow-delay=".2s">PROGRAM-PROGRAM YAYASAN</h2>
 					<div class="description wow fadeInUp" data-wow-delay=".4s"></div>
 					<div class="campaign-content">
 						<div class="row">
-							<div class="col-md-4">
+							<div class="col-md-4" *ngFor="let newsLatest of latest">
 								<div class="campaign-item wow fadeInUp" data-wow-delay=".1s">
 									<a class="overlay" href="https://demo.themegoals.com/html/ideabox/campaign_detail.html">
-										<img src="../assets/images/aktiviti/aktiviti01.jpg" alt="">
+										<img src="{{newsLatest.campaign_image}}" alt="">
 										<span class="ion-ios-search-strong"></span>
 									</a>
 									<div class="campaign-box">
-										<a href="https://demo.themegoals.com/html/ideabox/#" class="category">Aktiviti Kemasyarakatan</a>
-										<h3><a href="https://demo.themegoals.com/html/ideabox/campaign_detail.html">PRIHATIN KESIHATAN</a></h3>
-										<div class="campaign-description">Aktiviti teras dan utama MyPrihatin dalam membantu pesakit kronik. Kerjasama erat MyPrihatin bersama Yayasan IJN dan PPUKM.</div>
-										<div class="campaign-author"><a class="author-icon" href="https://demo.themegoals.com/html/ideabox/#"><img src="../assets/images/aktiviti/admin.png" alt=""></a>by <a class="author-name" href="https://demo.themegoals.com/html/ideabox/#">Admin</a></div>
+										<a href="https://demo.themegoals.com/html/ideabox/#" class="category"></a>
+										<h3><a href="https://demo.themegoals.com/html/ideabox/campaign_detail.html">{{newsLatest.campaign_name}}</a></h3>
+										<div class="campaign-description">
+										{{newsLatest.description}}
+										</div>
+										<div class="campaign-author"><a class="author-icon" href="https://demo.themegoals.com/html/ideabox/#"><img src="../assets/images/aktiviti/admin.png" alt=""></a>by <a class="author-name" href="https://demo.themegoals.com/html/ideabox/#">{{newsLatest.organiser}}</a></div>
 										<div class="process">
 											<div class="raised"><span style="width: 142.594px;"></span></div>
 											<div class="process-info">
-												<div class="process-pledged"><span>Date Publish</span>29th March 2017</div>
-												<div class="process-funded2"><span>Location</span>Kampung Kajang Utama</div>
+												<div class="process-pledged"><span>Date Publish</span>{{newsLatest.campaign_start_date}}</div>
+												<div class="process-funded2"><span>Location</span>{{newsLatest.location}}</div>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="col-md-4">
+							<!-- <div class="col-md-4">
 								<div class="campaign-item wow fadeInUp" data-wow-delay=".1s">
 									<a class="overlay" href="https://demo.themegoals.com/html/ideabox/campaign_detail.html">
 										<img src="../assets/images/aktiviti/aktiviti02.jpg" alt="">
@@ -140,8 +142,8 @@
 										</div>
 									</div>
 								</div>
-							</div>
-							<div class="col-md-4">
+							</div> -->
+<!-- 							<div class="col-md-4">
 								<div class="campaign-item wow fadeInUp" data-wow-delay=".1s">
 									<a class="overlay" href="https://demo.themegoals.com/html/ideabox/campaign_detail.html">
 										<img src="../assets/images/aktiviti/aktiviti03.jpg" alt="">
@@ -161,10 +163,10 @@
 										</div>
 									</div>
 								</div>
-							</div>
+							</div> -->
 						</div>
-						<br/>
-						<div class="row">
+						<!--<br/>
+	 					<div class="row">
 							<div class="col-md-4">
 								<div class="campaign-item wow fadeInUp" data-wow-delay=".1s">
 									<a class="overlay" href="https://demo.themegoals.com/html/ideabox/campaign_detail.html">
@@ -207,7 +209,7 @@
 									</div>
 								</div>
 							</div>
-						</div>
+						</div> -->
 					</div>
 					<div class="latest-button wow fadeInUp" data-wow-delay=".4s"><a href="https://demo.themegoals.com/html/ideabox/#" class="btn-primary">Lihat Program</a></div>
 				</div>
