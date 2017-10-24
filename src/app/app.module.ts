@@ -12,8 +12,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
+<<<<<<< HEAD
 import { HttpService } from '../provider/http/http.service';
 import { AuthService } from '../provider/auth/auth.service';
+=======
+>>>>>>> f52384c918b067a3de7b1d4a7b546a32009025d6
 
 @NgModule({
   declarations: [
@@ -36,7 +39,7 @@ import { AuthService } from '../provider/auth/auth.service';
   ],
 
   bootstrap: [
-    HomeComponent
+    AppComponent
   ]
 })
 export class AppModule {
