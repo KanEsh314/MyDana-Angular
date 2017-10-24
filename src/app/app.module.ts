@@ -7,11 +7,13 @@ import { HomeComponent } from '../pages/home/home.component';
 import { RegisterComponent } from '../pages/register/register.component';
 import { PaymentComponent } from '../pages/payment/payment.component';
 import { CampaignComponent } from '../pages/campaign/campaign.component';
-import { routes } from './app.router';
 
-import { HttpService } from '../provider/http/http.service'
+import { AppRoutingModule } from './app-routing.module';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
+
+import { HttpService } from '../provider/http/http.service';
+import { AuthService } from '../provider/auth/auth.service';
 
 @NgModule({
   declarations: [
@@ -25,11 +27,12 @@ import { RouterModule } from '@angular/router';
   imports: [
     BrowserModule,
     HttpModule,
-    routes
+    AppRoutingModule
   ],
 
   providers: [
-    HttpService
+    HttpService,
+    AuthService
   ],
 
   bootstrap: [
