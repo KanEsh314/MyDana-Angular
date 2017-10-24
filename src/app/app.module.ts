@@ -13,6 +13,7 @@ import { HttpService } from '../provider/http/http.service'
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +34,7 @@ import { RouterModule } from '@angular/router';
   ],
 
   bootstrap: [
-    HomeComponent
+    AppComponent
   ]
 })
 export class AppModule {
