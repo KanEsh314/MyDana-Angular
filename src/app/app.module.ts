@@ -7,6 +7,7 @@ import { HomeComponent } from '../pages/home/home.component';
 import { RegisterComponent } from '../pages/register/register.component';
 import { PaymentComponent } from '../pages/payment/payment.component';
 import { CampaignComponent } from '../pages/campaign/campaign.component';
+import { routes } from './app.router';
 
 import { HttpService } from '../provider/http/http.service'
 import { HttpModule } from '@angular/http';
@@ -23,16 +24,7 @@ import { RouterModule } from '@angular/router';
   imports: [
     BrowserModule,
     HttpModule,
-    RouterModule.forRoot([
-    {
-      path: 'login', 
-      component: LoginComponent 
-    },
-    {
-      path: 'register',
-      component: RegisterComponent
-    }
-    ])
+    routes
   ],
 
   providers: [
