@@ -1,3 +1,4 @@
+<router-outlet></router-outlet>
 <div class="home" cz-shortcut-listen="true">
 	<div id="wrapper">
 		<header id="header" class="site-header">
@@ -10,19 +11,19 @@
 						<button class="c-hamburger c-hamburger--htx"><span></span></button>
 						<ul>
 							<li>
-								<a href="#" type="button">Utama</a>
+								<a routerLink="/">Utama</a>
 							</li>
 							<li>
-								<a href="aboutus.htm">Tentang Kami</a>
+								<a routerLink="/about">Tentang Kami</a>
 							</li>
 							<li>
-								<a href="#">Program<i class="fa fa-caret-down" aria-hidden="true"></i></a>
+								<a >Program<i class="fa fa-caret-down" aria-hidden="true"></i></a>
 								<ul class="sub-menu">
-									<li><a href="#">Prihatin Kesihatan</a></li>
-									<li><a href="#">Prihatin Kasih</a></li>
-									<li><a href="#">Prihatin Amal</a></li>
-									<li><a href="#">Prihatin Komuniti</a></li>
-									<li><a href="#">Prihatin Ilmu</a></li>
+									<li><a >Prihatin Kesihatan</a></li>
+									<li><a >Prihatin Kasih</a></li>
+									<li><a >Prihatin Amal</a></li>
+									<li><a >Prihatin Komuniti</a></li>
+									<li><a >Prihatin Ilmu</a></li>
 								</ul>
 							</li>
 						</ul>
@@ -37,7 +38,7 @@
 					</div>	
 
 					<div class="login login-button">
-						<a class="btn-primary">Login</a>
+						<a class="btn-primary" routerLink="/login">Login</a>
 					</div><!-- .login -->
 				</div><!--. right-header -->
 			</div><!-- .container -->

@@ -1,3 +1,4 @@
+<router-outlet></router-outlet>
 <div cz-shortcut-listen="true">
 	<div id="wrapper">
 		<header id="header" class="site-header">
@@ -10,10 +11,10 @@
 						<button class="c-hamburger c-hamburger--htx"><span></span></button>
 						<ul>
 							<li>
-								<a href="">Utama</a>
+								<a routerLink="/">Utama</a>
 							</li>
 							<li>
-								<a href="aboutus.htm">Tentang Kami</a>
+								<a routerLink="/about">Tentang Kami</a>
 							</li>
 							<li>
 								<a href="#">Program<i class="fa fa-caret-down" aria-hidden="true"></i></a>
@@ -37,7 +38,7 @@
 					</div>	
 
 					<div class="login login-button">
-						<a href="#" class="btn-primary">Login</a>
+						<a class="btn-primary" routerLink="/login" >Login</a>
 					</div><!-- .login -->
 				</div><!--. right-header -->
 			</div><!-- .container -->
@@ -73,7 +74,7 @@
 						  		
 						  	</div>
 							<div class="inline clearfix">
-							<p>Not a member yet? <a href="https://demo.themegoals.com/html/ideabox/register.html">Register Now</a></p>
+							<p>Not a member yet? <a routerLink="/register">Register Now</a></p>
 							</div>
 							<div class="inline clearfix">
 							</div>

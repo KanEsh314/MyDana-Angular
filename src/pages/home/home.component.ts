@@ -38,8 +38,4 @@ export class HomeComponent implements OnInit {
 
     //
   }
-
-  gotoDetail(): void {
-    this.router.navigate(['/login']);
-  }
 }
