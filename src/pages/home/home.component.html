@@ -39,6 +39,7 @@
 
 					<div class="login login-button">
 						<a class="btn-primary" routerLink="/login">Login</a>
+						<a class="btn-primary" routerLink="/login">Profile</a>
 					</div><!-- .login -->
 				</div><!--. right-header -->
 			</div><!-- .container -->
@@ -52,7 +53,7 @@
 						<img alt="pic" src="../assets/images/text-seringgit.png">
 						<div class="sideshow-description wow fadeInUp" data-wow-delay=".3s">Pasangan kembar Muhammad Alimi Aliff dan 	Muhmmad Azizi Aliff di antara 425 penerima yang telah berjaya dibantu </div>
 						<div class="button wow fadeInUp" data-wow-delay="0.3s">
-							<a href="https://demo.themegoals.com/html/ideabox/#" class="btn-secondary">Derma Sekarang</a>
+							<a class="btn-secondary" routerLink="/payment">Derma Sekarang</a>
 						</div>
 					</div><!-- .sideshow-content -->
 				</div>
@@ -100,9 +101,9 @@
 					<div class="description wow fadeInUp" data-wow-delay=".4s"></div>
 					<div class="campaign-content">
 						<div class="row">
-							<div class="col-md-4" *ngFor="let newsLatest of latest">
+							<div class="col-md-4" *ngFor="let newsLatest of latest" [routerLink]="['/campaign',newsLatest]">
 								<div class="campaign-item wow fadeInUp" data-wow-delay=".1s">
-									<a class="overlay" href="https://demo.themegoals.com/html/ideabox/campaign_detail.html">
+									<a class="overlay">
 										<img src="{{newsLatest.campaign_image}}" alt="">
 										<span class="ion-ios-search-strong"></span>
 									</a>

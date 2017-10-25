@@ -60,17 +60,18 @@
 			<div class="box-signup">
 					<div class="form-login">
 						<h2>Log in with your account</h2>
-						<form action="https://demo.themegoals.com/html/ideabox/s" method="POST" id="loginForm" class="clearfix">
-			  				<div class="field">
-			  					<input type="text" name="name" placeholder="Username" required>
+
+						<form class="clearfix">
+			  				<div class="field" name="form">
+			  					<input placeholder="Username" type="text" class="form-control" id="name" required [(ngModel)]="model.name" name="name" #name="ngModel">
 			  				</div>
 			  				<div class="field">
-			  					<input type="password" name="password" placeholder="Password" required>
+			  					<input placeholder="Password" type="password" class="form-control" id="password" required [(ngModel)]="model.password" name="password" #password="ngModel">
 								<a href="https://demo.themegoals.com/html/ideabox/register.html">Forgot your password?</a>
 								
 			  				</div>
 			  				<div class="inline clearfix">
-						  		<button type="submit" value="Send Messager" class="btn-primary">Login</button>
+						  		<button type="submit" value="Send Messager" class="btn-primary" (click)="getLogged()">Login</button>
 						  		
 						  	</div>
 							<div class="inline clearfix">
@@ -78,8 +79,8 @@
 							</div>
 							<div class="inline clearfix">
 							</div>
-							
 					  	</form>
+
 					</div>
 			</div>
 			</div>	

@@ -10,10 +10,10 @@
 						<button class="c-hamburger c-hamburger--htx"><span></span></button>
 						<ul>
 							<li>
-								<a href="">Utama</a>
+								<a routerLink="/">Utama</a>
 							</li>
 							<li>
-								<a href="aboutus.htm">Tentang Kami</a>
+								<a router="/about">Tentang Kami</a>
 							</li>
 							<li>
 								<a href="#">Program<i class="fa fa-caret-down" aria-hidden="true"></i></a>
@@ -37,7 +37,7 @@
 					</div>	
 
 					<div class="login login-button">
-						<a href="#" class="btn-primary">Login</a>
+						<a class="btn-primary" routerLink="/login">Login</a>
 					</div><!-- .login -->
 				</div><!--. right-header -->
 			</div><!-- .container -->
@@ -48,13 +48,13 @@
 				<div class="container">
 				<div class="col-md-2 col-xs-2 main-author">
 				<a class="main-author-icon" href="https://demo.themegoals.com/html/ideabox/#"><img src="assets/images/aktiviti/admin.png" alt=""></a>
-				<div class="process-pledged"><span>by Admin</span></div>
+				<div class="process-pledged"><span>by {{campaign.organiser}}</span></div>
 				<div class="process-pledged"><span>5 Created</span></div>
 
 				</div>
 				<div class="col-md-10 col-xs-10 main-titlecampaign">
-				<h2>PRIHATIN KESIHATAN</h2>
-				<p>Aktiviti teras dan utama MyPrihatin dalam membantu pesakit kronik. Kerjasama erat </p>
+				<h2>{{campaign.campaign_name}}</h2>
+				<p>{{campaign.description}}</p>
 				</div>
 					
 				</div>
@@ -97,7 +97,26 @@
 								<span class="glyphicon glyphicon-chevron-right"></span>
 								<span class="sr-only">Next</span>
 								</a>
-							</div>
+								</div>
+													<!--<div id="owl-campaign" class="campaign-slider owl-carousel owl-theme" style="opacity: 1; display: block;">
+									<div class="owl-wrapper-outer">
+									<div class="owl-wrapper" style="width: 3330px; left: 0px; display: block;">
+									<div class="owl-item" style="width: 555px;">
+									<div class="item"><img src="assets/images/campaign/pic1.jpg" alt="">
+									</div></div>
+									</div>
+									</div>
+								<div class="owl-controls clickable">
+								<div class="owl-pagination">
+								<div class="owl-page active" style="background: url(assets/images/campaign/pic1.jpg) 0% 0% / cover;">
+								<span class=""></span></div>
+								<div class="owl-page" style="background: url(assets/images/campaign/pic1.jpg) 0% 0% / cover;">
+								<span class=""></span></div>
+								<div class="owl-page" style="background: url(assets/images/campaign/pic1.jpg) 0% 0% / cover;"><span class=""></span></div>
+								</div>
+								<div class="owl-buttons"><div class="owl-prev"><span class="ion-ios-arrow-back"></span></div><div class="owl-next"><span class="ion-ios-arrow-forward"></span></div></div>
+								</div>
+								</div>-->
 							</div>
 							<div class="campaign-box">
 								<div class="campaign-author clearfix">

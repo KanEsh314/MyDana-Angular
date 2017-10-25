@@ -12,6 +12,7 @@ import { AboutComponent } from '../pages/about/about.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { HttpService } from '../provider/http/http.service';
 import { AuthService } from '../provider/auth/auth.service';
@@ -29,7 +30,9 @@ import { AuthService } from '../provider/auth/auth.service';
   imports: [
     BrowserModule,
     HttpModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
 
   providers: [

@@ -10,7 +10,8 @@ import { CampaignComponent } from '../pages/campaign/campaign.component';
 import { AboutComponent } from '../pages/about/about.component';
 
 const routes : Routes = [
-	{ path : '', redirectTo: '/home', pathMatch: 'full' },
+	//{ path : '', redirectTo: '/', pathMatch: 'full' },
+	{ path : 'home', component: HomeComponent },
 	{ path : 'login', component: LoginComponent },
 	{ path : 'campaign', component: CampaignComponent },
 	{ path : 'register', component: RegisterComponent },

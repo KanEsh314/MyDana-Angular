@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../../provider/auth/auth.service'; 
+import { AuthService } from '../../provider/auth/auth.service';
+import { Router } from '@angular/router'; 
 
 @Component({
   selector: 'app-login',
@@ -8,27 +9,30 @@ import { AuthService } from '../../provider/auth/auth.service';
 })
 export class LoginComponent implements OnInit {
 
-	name = '';
-	password = '';
+  model: any = {};
 
-
-  
-  constructor(public authServices: AuthService){
+  constructor(public authServices: AuthService, public router: Router){
 
   }
 
   ngOnInit() {
-		
-	let details = {
-		name : this.name,
-		password: this.password
-	};
+    
+    let details = {
+    name : this.model.name,
+    password: this.model.password
+  };
 
-  	this.authServices.loginAccount(details).then((result) => {
-  		console.log(result);
-  	},(err) => {
-  		console.log(err);
-  	});
+    this.authServices.loginAccount(details).then(result => {
+      console.log(result);
+      console.log("Success");
+    },(err) => {
+      console.log(err);
+      console.log("Fail");
+    });
+  }
+
+  getLogged(){
+    this.ngOnInit();
   }
 
 }

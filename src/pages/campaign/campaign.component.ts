@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpService } from '../../provider/http/http.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-campaign',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CampaignComponent implements OnInit {
 
-  constructor() { }
+  campaign : any;
+
+  constructor(public httpServices: HttpService, public route: ActivatedRoute) {
+
+  }
 
   ngOnInit() {
+
+  	this.route.params.subscribe(params => {
+  		this.campaign = params;
+  		//console.log(this.campaign);
+  	}, (err) => {
+  		console.log(err);
+  	});
   }
 
 }

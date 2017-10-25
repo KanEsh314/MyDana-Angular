@@ -31,11 +31,15 @@ export class HomeComponent implements OnInit {
     this.httpServices.getLatest()
     .subscribe(data => {
       this.latest = data.data;
-      console.log(this.latest);
+      //console.log(this.latest);
     }, (err) => {
       console.log(err);
     });
 
     //
+  }
+
+  getCampaign(latest){
+    this.router.navigate(['/campaign',latest]);
   }
 }

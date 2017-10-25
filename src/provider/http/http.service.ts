@@ -19,4 +19,9 @@ export class HttpService {
   	.map((res:Response) => res.json());
   }
 
+  getCampaign(){
+    return this.http.get('https://mydana.herokuapp.com/api/campaigns')
+    .map((res:Response) => res.json());
+  }
+
 }
