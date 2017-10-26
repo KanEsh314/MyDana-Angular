@@ -17,6 +17,9 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     
+  }
+
+  getLogged(){
     let details = {
     name : this.model.name,
     password: this.model.password
@@ -29,10 +32,6 @@ export class LoginComponent implements OnInit {
       console.log(err);
       console.log("Fail");
     });
-  }
-
-  getLogged(){
-    this.ngOnInit();
   }
 
 }

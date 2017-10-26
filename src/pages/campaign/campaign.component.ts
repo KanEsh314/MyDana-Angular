@@ -9,7 +9,8 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class CampaignComponent implements OnInit {
 
-  campaign : any;
+  private campaign;
+  popular : any;
 
   constructor(public httpServices: HttpService, public route: ActivatedRoute) {
 
@@ -17,12 +18,21 @@ export class CampaignComponent implements OnInit {
 
   ngOnInit() {
 
-  	this.route.params.subscribe(params => {
-  		this.campaign = params;
-  		//console.log(this.campaign);
-  	}, (err) => {
-  		console.log(err);
-  	});
+  	  this.route.params.subscribe(params => {
+  	 	this.campaign =+params['id'];
+       //console.log(this.campaign);
+  	 }, (err) => {
+  	 	console.log(err);
+  	 });
+
+    //Popular
+    this.httpServices.getCampaignById(this.campaign).subscribe(data => {
+      this.popular = data.data;
+      //console.log(this.popular);
+    }, (err) => {
+      console.log(err);
+    });
+
   }
 
 }

@@ -51,4 +51,25 @@ export class AuthService {
       });
     });
   }
+
+  editAccount(upData, id){
+
+    return new Promise((resolve, reject) => {
+
+      let headers = new Headers();
+      headers.append('Content-Type', 'application/json');
+
+      this.http.post('https://mydana.herokuapp.com/api/user/'+ id, JSON.stringify(upData), {headers: headers})
+      .subscribe(res => {
+
+        let data = res.json();
+        this.token = data.token;
+        localStorage.setItem('token', data.token);
+        resolve(data);
+
+      }, (err) => {
+          reject(err);
+      });
+    });
+  }
 }

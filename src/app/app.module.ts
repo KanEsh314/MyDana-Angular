@@ -8,6 +8,7 @@ import { RegisterComponent } from '../pages/register/register.component';
 import { PaymentComponent } from '../pages/payment/payment.component';
 import { CampaignComponent } from '../pages/campaign/campaign.component';
 import { AboutComponent } from '../pages/about/about.component';
+import { ProfileComponent } from '../pages/profile/profile.component';
 
 import { AppRoutingModule } from './app-routing.module';
 import { HttpModule } from '@angular/http';
@@ -25,7 +26,8 @@ import { AuthService } from '../provider/auth/auth.service';
     RegisterComponent,
     PaymentComponent,
     CampaignComponent,
-    AboutComponent
+    AboutComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +43,7 @@ import { AuthService } from '../provider/auth/auth.service';
   ],
 
   bootstrap: [
-    HomeComponent
+    AppComponent
   ]
 })
 export class AppModule {

@@ -24,4 +24,13 @@ export class HttpService {
     .map((res:Response) => res.json());
   }
 
+  getCampaignById(id){
+    return this.http.get('https://mydana.herokuapp.com/api/campaign/'+id)
+    .map((res:Response) => res.json());
+  }
+
+  getUserById(id){
+    return this.http.get('https://mydana.herokuapp.com/api/user/'+id)
+    .map((res:Response) => res.json());
+  }
 }

@@ -39,7 +39,8 @@ export class HomeComponent implements OnInit {
     //
   }
 
-  getCampaign(latest){
-    this.router.navigate(['/campaign',latest]);
+  getCampaign(id){
+    this.router.navigate(['/campaign',id]);
   }
 }
+//[routerLink]="['/campaign',newsLatest.campaign_id]"

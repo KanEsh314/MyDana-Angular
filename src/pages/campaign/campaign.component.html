@@ -37,24 +37,24 @@
 					</div>	
 
 					<div class="login login-button">
-						<a class="btn-primary" routerLink="/login">Login</a>
+						<a class="btn-primary" routerLink='/login'>Login</a>
 					</div><!-- .login -->
 				</div><!--. right-header -->
 			</div><!-- .container -->
 		</header><!-- .site-header -->
 
 		<main id="main" class="site-main">
-			<div class="page-title background-campaign">
+			<div class="page-title background-campaign" *ngIf="popular">
 				<div class="container">
 				<div class="col-md-2 col-xs-2 main-author">
 				<a class="main-author-icon" href="https://demo.themegoals.com/html/ideabox/#"><img src="assets/images/aktiviti/admin.png" alt=""></a>
-				<div class="process-pledged"><span>by {{campaign.organiser}}</span></div>
+				<div class="process-pledged"><span>by {{popular.organiser}}</span></div>
 				<div class="process-pledged"><span>5 Created</span></div>
 
 				</div>
 				<div class="col-md-10 col-xs-10 main-titlecampaign">
-				<h2>{{campaign.campaign_name}}</h2>
-				<p>{{campaign.description}}</p>
+				<h2>{{popular.campaign_name}}</h2>
+				<p>{{popular.description}}</p>
 				</div>
 					
 				</div>
@@ -163,7 +163,7 @@
 							<div class="main-navigation-details">
 							<div class="col-md-8 col-xs-8 main-nav">
 							<ul class="tabs-controls">
-									<li class="" data-tab="campaign"><a href="#">Campaign</a></li>
+									<li data-tab="campaign"><a href="#">Campaign</a></li>
 									<li data-tab="faq" class="active"><a href="#">FAQ</a></li>
 									<li data-tab="faq"><a href="#">Updates</a></li>
 									<li data-tab="backer" class=""><a href="#">Comments</a></li>
@@ -185,7 +185,7 @@
 										<p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved</p>
 									</div>
 									<div id="backer" class="tabs active">
-										<table>
+										<!-- <table>
 											<tbody><tr>
 												<th>Name</th>
 												<th>Donate Amount</th>
@@ -221,7 +221,7 @@
 												<td>$80</td>
 												<td>June 15, 2017</td>
 											</tr>
-										</tbody></table>
+										</tbody></table> -->
 									</div>
 									<div id="faq" class="tabs">
 										<h2>Frequently Asked Questions</h2>

@@ -8,15 +8,17 @@ import { RegisterComponent } from '../pages/register/register.component';
 import { PaymentComponent } from '../pages/payment/payment.component';
 import { CampaignComponent } from '../pages/campaign/campaign.component';
 import { AboutComponent } from '../pages/about/about.component';
+import { ProfileComponent } from '../pages/profile/profile.component';
 
 const routes : Routes = [
-	//{ path : '', redirectTo: '/', pathMatch: 'full' },
+	{ path : '', redirectTo: 'home', pathMatch: 'full' },
 	{ path : 'home', component: HomeComponent },
 	{ path : 'login', component: LoginComponent },
-	{ path : 'campaign', component: CampaignComponent },
+	{ path : 'campaign/:id', component: CampaignComponent },
 	{ path : 'register', component: RegisterComponent },
 	{ path : 'payment', component: PaymentComponent },
-	{ path : 'about', component: AboutComponent }
+	{ path : 'about', component: AboutComponent },
+	{ path : 'profile', component: ProfileComponent }
 	];
 
 	@NgModule({

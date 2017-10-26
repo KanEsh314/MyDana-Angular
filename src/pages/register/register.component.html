@@ -1,4 +1,3 @@
-<router-outlet></router-outlet>
 <div cz-shortcut-listen="true">
 	<div id="wrapper">
 		<header id="header" class="site-header">
@@ -74,7 +73,7 @@
 			  					<input type="email" placeholder="Email" class="form-control" id="email" required [(ngModel)]="reg.email" name="email" #email="ngModel">
 			  				</div>
 							<div class="field">
-			  					<input type="text" placeholder="Password" class="form-control" id="password" required [(ngModel)]="reg.password" name="password" #password="ngModel">
+			  					<input type="password" placeholder="Password" class="form-control" id="password" required [(ngModel)]="reg.password" name="password" #password="ngModel">
 			  				</div>
 			  				<div class="inline clearfix">
 						  		<button type="submit" value="Send Messager" class="btn-primary" (click)="getRegister()">Register</button>
