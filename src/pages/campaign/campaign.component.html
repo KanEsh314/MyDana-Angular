@@ -163,11 +163,11 @@
 							<div class="main-navigation-details">
 							<div class="col-md-8 col-xs-8 main-nav">
 							<ul class="tabs-controls">
-									<li data-tab="campaign"><a href="#">Campaign</a></li>
-									<li data-tab="faq" class="active"><a href="#">FAQ</a></li>
-									<li data-tab="faq"><a href="#">Updates</a></li>
-									<li data-tab="backer" class=""><a href="#">Comments</a></li>
-									<li data-tab="campaign" class=""><a href="#">Community</a></li>
+									<li data-tab="campaign" class="active">Campaign</li>
+									<li data-tab="faq">FAQ</li>
+									<li data-tab="faq">Updates</li>
+									<li data-tab="backer">Comments</li>
+									<li data-tab="news">News</li>
 								</ul>
 							</div>
 							<div class="col-md-4 col-xs-4 buttonshare">
@@ -184,44 +184,30 @@
 										<p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment.</p>
 										<p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved</p>
 									</div>
+									<div id="news" class="tabs">
+										<section class="blank">
+											<div class="item-featured" *ngFor="let new of news">
+													<img src="{{new.image}}" alt="Image">
+												<div class="item-info">
+													<h1>{{new.title}}</h1>
+													<p>{{new.desc}}</p>
+												</div>
+												<br class="clear">
+											</div>
+										</section>
+									</div>
 									<div id="backer" class="tabs active">
-										<!-- <table>
-											<tbody><tr>
-												<th>Name</th>
-												<th>Donate Amount</th>
-												<th>Date</th>
-											</tr>
-											<tr>
-												<td>Andrew</td>
-												<td>$100</td>
-												<td>June 25, 2017</td>
-											</tr>
-											<tr>
-												<td>Andrew</td>
-												<td>$60</td>
-												<td>December 25, 2017</td>
-											</tr>
-											<tr>
-												<td>Andrew</td>
-												<td>$70</td>
-												<td>November 25, 2017</td>
-											</tr>
-											<tr>
-												<td>Andrew</td>
-												<td>$90</td>
-												<td>February 25, 2017</td>
-											</tr>
-											<tr>
-												<td>Andrew</td>
-												<td>$30</td>
-												<td>January 25, 2017</td>
-											</tr>
-											<tr>
-												<td>Andrew</td>
-												<td>$80</td>
-												<td>June 15, 2017</td>
-											</tr>
-										</tbody></table> -->
+										<div class="field">
+			  								<p>
+			  									<input type="text" placeholder="Title" id="textTitle" [(ngModel)]="camp.textTitle" name="textTitle" #textTitle="ngModel">
+			  								</p>
+			  								<p>
+			  									<input type="text" placeholder="Leave a message" [(ngModel)]="camp.textMsg" name="textMsg" #textMsg="ngModel" />
+			  								</p>
+			  								<p>
+    											<a class="btn-primary" (click)="postComment()">Post Comment</a>
+    										</p>
+			  							</div>
 									</div>
 									<div id="faq" class="tabs">
 										<h2>Frequently Asked Questions</h2>

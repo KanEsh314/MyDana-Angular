@@ -11,6 +11,12 @@ export class CampaignComponent implements OnInit {
 
   private campaign;
   popular : any;
+  
+  camp: any = {};
+
+  news : any;
+
+  public repoUrl:string;
 
   constructor(public httpServices: HttpService, public route: ActivatedRoute) {
 
@@ -32,6 +38,31 @@ export class CampaignComponent implements OnInit {
     }, (err) => {
       console.log(err);
     });
+
+    //News
+    this.httpServices.getNews(this.campaign).subscribe(data => {
+      this.news = data.data;
+      console.log(this.news);
+    }, (err) => {
+      console.log(err);
+    })
+
+  }
+
+  postComment(){
+
+    let com = {
+      title : this.camp.textTitle,
+      desc : this.camp.textMsg,
+      user_id : 2,
+      campaign_id : this.campaign
+    }
+
+    this.httpServices.postComment(com, this.campaign).then(data => {
+      console.log(data);
+    }, (err) => {
+      console.log(err);
+    })
 
   }
 

@@ -33,4 +33,30 @@ export class HttpService {
     return this.http.get('https://mydana.herokuapp.com/api/user/'+id)
     .map((res:Response) => res.json());
   }
+
+  postComment(comm, id){
+   
+    return new Promise((resolve, reject) => {
+
+      let headers = new Headers();
+      headers.append('Content-Type','application/json');
+
+      this.http.post('https://mydana.herokuapp.com/api/campaign/'+id+'/campaigncomment', JSON.stringify(comm), {headers:headers})
+      .subscribe(res => {
+       
+        let data = res.json();
+        console.log(data);
+        resolve(data);
+      
+      }, (err) => {
+        reject(err);
+      });
+    });
+  }
+
+  getNews(id){
+    return this.http.get('https://mydana.herokuapp.com/api/campaign/'+id+'/campaignnew')
+    .map((res:Response) => res.json());
+  }
+
 }

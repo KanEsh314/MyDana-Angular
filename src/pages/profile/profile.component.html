@@ -76,7 +76,8 @@
 								<h3 class="account-title">My Profiles</h3>
 								<div class="account-main">
 									<div class="author clearfix">
-										<a class="author-avatar" href="https://demo.themegoals.com/html/ideabox/profile.html#"><img src="assets/images/User-icon.png" alt=""></a>
+										<a class="author-avatar" href="https://demo.themegoals.com/html/ideabox/profile.html#">
+											<img src="{{userInfo.image}}" alt=""></a>
 										<div class="author-content">
 											<div class="author-title">
 												<h3>
@@ -88,63 +89,68 @@
 											</div>
 										</div>
 									</div>
-									<div class="profile-box">
+									<div class="profile-box" *ngIf="userInfo">
 										<ul>
 											<li>
-												<strong>About Me:</strong>
-												<div class="profile-text"><p>I feel the presence of the Almighty, who formed us in his own image, and the breath of that universal love which bears and sustains us, as it floats around us in an eternity of bliss; and then, my friend, when darkness overspreads my eyes, and heaven and earth seem to dwell in my soul and absorb its power, like the form of a beloved mistress, then I often think with longing</p></div>
+												<div class="field">
+													<input type="text" placeholder="Name" class="form-control" id="name" [(ngModel)]="userInfo.name" name="name" #name="ngModel">
+												</div>
+											</li>
+
+											<li>
+												<div class="field">
+			  										<input type="text" placeholder="First Name" class="form-control" id="first_name" required="required" [(ngModel)]="userInfo.first_name" name="first_name" #first_name="ngModel">
+			  									</div>
 											</li>
 											<li>
-												<strong>Bio:</strong>
-												<div class="profile-text"><p>Oh, would I could describe these conceptions, could impress upon paper all that is living so full and warm within me, that it might be the mirror of my soul, as my soul is the mirror of the infinite God!</p></div>
+												<div class="field">
+													<input type="text" placeholder="Last Name" class="form-control" id="last_name" required="required" [(ngModel)]="userInfo.last_name" name="last_name" #last_name="ngModel">
+												</div>
 											</li>
 											<li>
-												<strong>First Name</strong>
-												<div class="profile-text"><p>{{userInfo.first_name}}</p></div>
+												<div class="field">
+													<input type="text" placeholder="gender" class="form-control" id="gender" [(ngModel)]="userInfo.gender" name="gender" #gender="ngModel">
+												</div>
 											</li>
 											<li>
-												<strong>Last Name</strong>
-												<div class="profile-text"><p>{{userInfo.last_name}}</p></div>
+												<div>
+													<input type="text" placeholder="Birthday (YYYY/MM/DD)" class="form-control" id="birthday" [(ngModel)]="userInfo.birthdate" name="birthdate" #birthdate="ngModel">
+												</div>
 											</li>
 											<li>
-												<strong>Gender</strong>
-												<div class="profile-text"><p>{{userInfo.gender}}</p></div>
+												<div>
+													<input type="text" placeholder="Race" class="form-control" id="race" [(ngModel)]="userInfo.race" name="race" #race="ngModel">
+												</div>
 											</li>
 											<li>
-												<strong>Birthday Date</strong>
-												<div class="profile-text"><p>{{userInfo.birthdate}}</p></div>
+												<div class="field">
+													<input type="text" placeholder="Address" class="form-control" id="address" [(ngModel)]="userInfo.address" name="address" #address="ngModel">
+												</div>
 											</li>
 											<li>
-												<strong>Race</strong>
-												<div class="profile-text"><p>{{userInfo.race}}</p></div>
+												<div>
+													<input type="text" placeholder="Locale" class="form-control" id="locale" [(ngModel)]="userInfo.locale" name="locale" #locale="ngModel">
+												</div>
 											</li>
 											<li>
-												<strong>Address</strong>
-												<div class="profile-text"><p>{{userInfo.address}}</p></div>
+												<div>
+													<input type="tel" placeholder="Phone Number" class="form-control" id="phone_number" [(ngModel)]="userInfo.phone_number" name="phone_number" #phone_number="ngModel">
+												</div>
 											</li>
 											<li>
-												<strong>Locale</strong>
-												<div class="profile-text"><p>{{userInfo.locale}}</p></div>
+												<div class="field">
+													<input type="email" placeholder="Email" class="form-control" id="email" required="required" [(ngModel)]="userInfo.email" name="email" #email="ngModel">
+												</div>
+												
 											</li>
 											<li>
-												<strong>Mobile</strong>
-												<div class="profile-text"><p>{{userInfo.phone_number}}</p></div>
-											</li>
-											<li>
-												<strong>Email</strong>
-												<div class="profile-text"><p>{{userInfo.email}}</p></div>
-											</li>
-											<li>
-												<strong>Password</strong>
-												<div class="profile-text"><p>{{userInfo.password}}</p></div>
-											</li>
-											<li>
-												<strong>Confirm Password</strong>
-												<div class="profile-text"><p>{{userInfo.password}}</p></div>
+												<div class="field">
+													<input type="password" placeholder="Password" class="form-control" id="password" required="required" [(ngModel)]="userInfo.password" name="password" #password="ngModel">
+												</div>
 											</li>
 										</ul>
 									</div>
-									<a class="btn-primary">Edit Profiles</a>
+									<a class="btn-primary" (click)="getUpdate()">Edit Profiles</a>
 								</div>
 							</div>
 						</div>
