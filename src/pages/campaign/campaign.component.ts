@@ -40,7 +40,7 @@ export class CampaignComponent implements OnInit {
     //News
     this.httpServices.getNews(this.campaign).subscribe(data => {
       this.news = data.data;
-      console.log(this.news);
+      //console.log(this.news);
     }, (err) => {
       console.log(err);
     })

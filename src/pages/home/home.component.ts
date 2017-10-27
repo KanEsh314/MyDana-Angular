@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit {
   	this.httpServices.getBanner()
     .subscribe(data => {
       this.banner = data.data;
-      console.log(this.banner[0].banner_image);
+      //console.log(this.banner[0].banner_image);
     }, (err) => {
       console.log(err);
     });
@@ -43,4 +43,3 @@ export class HomeComponent implements OnInit {
     this.router.navigate(['/campaign',id]);
   }
 }
-//[routerLink]="['/campaign',newsLatest.campaign_id]"
