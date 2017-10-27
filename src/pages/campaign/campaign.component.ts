@@ -16,8 +16,6 @@ export class CampaignComponent implements OnInit {
 
   news : any;
 
-  public repoUrl:string;
-
   constructor(public httpServices: HttpService, public route: ActivatedRoute) {
 
   }
