@@ -34,6 +34,11 @@ export class HttpService {
     .map((res:Response) => res.json());
   }
 
+  getArticle(){
+    return this.http.get('https://mydana.herokuapp.com/api/articles')
+    .map((res:Response) => res.json());
+  }
+
   postComment(comm, id){
    
     return new Promise((resolve, reject) => {

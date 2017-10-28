@@ -1,0 +1,147 @@
+<div cz-shortcut-listen="true">
+	<div id="wrapper">
+		<header id="header" class="site-header">
+			<div class="container">
+				<div class="site-brand">
+					<a href="index.html"><img src="assets/images/logo_myprihatin.png" alt=""></a>
+				</div><!-- .site-brand -->
+				<div class="right-header">					
+					<nav class="main-menu">
+						<button class="c-hamburger c-hamburger--htx"><span></span></button>
+						<ul>
+							<li>
+								<a href="">Utama</a>
+							</li>
+							<li>
+								<a href="aboutus.htm">Tentang Kami</a>
+							</li>
+							<li>
+								<a href="#">Program<i class="fa fa-caret-down" aria-hidden="true"></i></a>
+								<ul class="sub-menu">
+									<li><a href="#">Prihatin Kesihatan</a></li>
+									<li><a href="#">Prihatin Kasih</a></li>
+									<li><a href="#">Prihatin Amal</a></li>
+									<li><a href="#">Prihatin Komuniti</a></li>
+									<li><a href="#">Prihatin Ilmu</a></li>
+								</ul>
+							</li>
+						</ul>
+					</nav><!-- .main-menu -->
+					<div class="search-icon">
+						<a href="#" class="ion-ios-search-strong"></a>
+						<div class="form-search"></div>
+						<form action="#" method="POST" id="searchForm">
+					  		<input type="text" value="" name="search" placeholder="Search...">
+					    	<button type="submit" value=""><span class="ion-ios-search-strong"></span></button>
+					  	</form>
+					</div>	
+
+					<div class="login login-button">
+						<a href="#" class="btn-primary">Login</a>
+					</div><!-- .login -->
+				</div><!--. right-header -->
+			</div><!-- .container -->
+		</header><!-- .site-header -->
+
+		<main id="main" class="site-main">
+			<div class="page-title background-blog">
+				<div class="container">
+					<h1>Article</h1>
+					<div class="breadcrumbs">
+						<ul>
+							<li><a href="https://demo.themegoals.com/html/ideabox/index.html">Home</a><span>/</span></li>
+							<li>Article</li>
+						</ul>
+					</div><!-- .breadcrumbs -->
+				</div>
+			</div><!-- .page-title -->
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 main-content">
+						<article *ngFor="let article of articles">
+							<a class="overlay" href="blog-detail.htm">
+								<img src="{{article.header_image}}" alt="">
+								<span class="ion-ios-search-strong"></span>
+							</a>
+							<div class="post-info">
+								<h3 class="post-title"><a href="https://demo.themegoals.com/html/ideabox/blog_details.html">{{article.article_title}}</a></h3>
+								<ul class="post-meta">
+									<li><i class="fa fa-calendar-check-o" aria-hidden="true"></i><a href="https://demo.themegoals.com/html/ideabox/blog_list.html#">{{article.article_date}}</a></li>
+									<li><i class="fa fa-user-o" aria-hidden="true"></i><span>by</span><a href="https://demo.themegoals.com/html/ideabox/blog_list.html#">{{article.user_id}}</a></li>
+								</ul>
+								<div class="post-desc"><p>{{article.description}}</p></div>
+							</div>
+						</article>
+						<div class="page-navigation">
+							<span class="page-numbers current">1</span>
+							<a href="#" class="page-numbers">2</a>
+							<a href="#" class="page-numbers">3</a>
+						</div>
+					</div>
+
+				</div>
+			</div><!-- .container -->
+		</main><!-- .site-main -->
+
+		<footer id="footer" class="site-footer">
+			<div class="footer-menu hidden-dekstop">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-5 col-xs-5">
+							<div class="footer-menu-item wow fadeInUp" data-wow-delay=".1s">
+								<h4>BERSAMA MEMBANTU MEREKA YANG MEMERLUKAN</h4>
+							</div>
+						</div>
+						<div class="col-md-2 col-xs-2">
+							<div class="footer-menu-item-center wow fadeInUp" data-wow-delay=".1s">
+							<i class="fa fa-heartbeat icon-lg"></i>
+							<img>
+								
+							</div>
+						</div>
+						<div class="col-md-5 col-xs-5">
+							<div class="footer-menu-item-right wow fadeInUp" data-wow-delay=".1s">
+								<h3>Sebarang pertanyaan boleh dikemukan kepada Sekretariat kami melalui saluran dibawah:</h3>
+								<h2>tel: 03 2858 7637 <br/>email: admin@myprihatin.org.my</h2>
+								<div class="footer-submenu-item wow fadeInUp" data-wow-delay=".1s">
+								<h3><a href="http://fb.com/yayasanmyprihatin"><i class="fa fa-facebook-official"></i> YayasanMyPrihatin</a></h3>
+								<h3><a href="http://instagram.com/yayasanmyprihatin"><i class="fa fa-instagram"></i> @yayasanmyprihatin</a></h3>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer-menu hidden-mobile">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="footer-menu-item wow fadeInUp" data-wow-delay=".1s">
+								<h4>Mobile BERSAMA MEMBANTU MEREKA YANG MEMERLUKAN</h4>
+							</div>
+						</div>
+						<div class="col-xs-12">
+							<div class="footer-menu-item-right wow fadeInUp" data-wow-delay=".1s">
+								<h3>Sebarang pertanyaan boleh dikemukan kepada Sekretariat kami melalui saluran dibawah:</h3>
+								<h2>tel: 03 2858 7637 <br/>email: admin@myprihatin.org.my</h2>
+								<div class="footer-submenu-item wow fadeInUp" data-wow-delay=".1s">
+								<h3><a href="http://fb.com/yayasanmyprihatin"><i class="fa fa-facebook-official"></i> YayasanMyPrihatin</a></h3>
+								<h3><a href="http://instagram.com/yayasanmyprihatin"><i class="fa fa-instagram"></i> @yayasanmyprihatin</a></h3>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- .footer-menu -->
+			<div class="footer-copyright">
+				<div class="container">
+					<p class="copyright">Yayasan MyPrihatin. All Rights Reserved.</p>
+					<a href="https://demo.themegoals.com/html/ideabox/#" class="back-top">Back to top<span class="ion-android-arrow-up"></span></a>
+				</div>
+			</div>
+		</footer><!-- site-footer -->
+	</div><!-- #wrapper -->
+</div>

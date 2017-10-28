@@ -9,6 +9,7 @@ import { PaymentComponent } from '../pages/payment/payment.component';
 import { CampaignComponent } from '../pages/campaign/campaign.component';
 import { AboutComponent } from '../pages/about/about.component';
 import { ProfileComponent } from '../pages/profile/profile.component';
+import { ArticlesComponent } from '../pages/articles/articles.component';
 
 const routes : Routes = [
 	{ path : '', redirectTo: 'home', pathMatch: 'full' },
@@ -18,7 +19,8 @@ const routes : Routes = [
 	{ path : 'register', component: RegisterComponent },
 	{ path : 'payment', component: PaymentComponent },
 	{ path : 'about', component: AboutComponent },
-	{ path : 'profile', component: ProfileComponent }
+	{ path : 'profile', component: ProfileComponent },
+	{ path : 'article', component: ArticlesComponent }
 	];
 
 	@NgModule({

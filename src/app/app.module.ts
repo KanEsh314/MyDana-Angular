@@ -9,6 +9,7 @@ import { PaymentComponent } from '../pages/payment/payment.component';
 import { CampaignComponent } from '../pages/campaign/campaign.component';
 import { AboutComponent } from '../pages/about/about.component';
 import { ProfileComponent } from '../pages/profile/profile.component';
+import { ArticlesComponent } from '../pages/articles/articles.component';
 
 import { AppRoutingModule } from './app-routing.module';
 import { HttpModule } from '@angular/http';
@@ -30,6 +31,7 @@ import { AuthService } from '../provider/auth/auth.service';
     CampaignComponent,
     AboutComponent,
     ProfileComponent,
+    ArticlesComponent,
   ],
   imports: [
     BrowserModule,
