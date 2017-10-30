@@ -3,20 +3,20 @@
 		<header id="header" class="site-header">
 			<div class="container">
 				<div class="site-brand">
-					<a href="index.html"><img src="assets/images/logo_myprihatin.png" alt=""></a>
+					<a routerLink="/home"><img src="assets/images/logo_myprihatin.png" alt=""></a>
 				</div><!-- .site-brand -->
 				<div class="right-header">					
 					<nav class="main-menu">
 						<button class="c-hamburger c-hamburger--htx"><span></span></button>
 						<ul>
 							<li>
-								<a href="">Utama</a>
+								<a routerLink="/home">Utama</a>
 							</li>
 							<li>
-								<a href="aboutus.htm">Tentang Kami</a>
+								<a routerLink="/about">Tentang Kami</a>
 							</li>
 							<li>
-								<a href="#">Program<i class="fa fa-caret-down" aria-hidden="true"></i></a>
+								<a >Program<i class="fa fa-caret-down" aria-hidden="true"></i></a>
 								<ul class="sub-menu">
 									<li><a href="#">Prihatin Kesihatan</a></li>
 									<li><a href="#">Prihatin Kasih</a></li>
@@ -28,16 +28,16 @@
 						</ul>
 					</nav><!-- .main-menu -->
 					<div class="search-icon">
-						<a href="#" class="ion-ios-search-strong"></a>
+						<a class="ion-ios-search-strong"></a>
 						<div class="form-search"></div>
-						<form action="#" method="POST" id="searchForm">
+						<form id="searchForm">
 					  		<input type="text" value="" name="search" placeholder="Search...">
 					    	<button type="submit" value=""><span class="ion-ios-search-strong"></span></button>
 					  	</form>
 					</div>	
 
 					<div class="login login-button">
-						<a href="#" class="btn-primary">Login</a>
+						<a class="btn-primary" routerLink="/login">Login</a>
 					</div><!-- .login -->
 				</div><!--. right-header -->
 			</div><!-- .container -->
@@ -49,7 +49,7 @@
 					<h1>Article</h1>
 					<div class="breadcrumbs">
 						<ul>
-							<li><a href="https://demo.themegoals.com/html/ideabox/index.html">Home</a><span>/</span></li>
+							<li><a routerLink="/home">Home</a><span>/</span></li>
 							<li>Article</li>
 						</ul>
 					</div><!-- .breadcrumbs -->
@@ -66,19 +66,61 @@
 							<div class="post-info">
 								<h3 class="post-title"><a href="https://demo.themegoals.com/html/ideabox/blog_details.html">{{article.article_title}}</a></h3>
 								<ul class="post-meta">
-									<li><i class="fa fa-calendar-check-o" aria-hidden="true"></i><a href="https://demo.themegoals.com/html/ideabox/blog_list.html#">{{article.article_date}}</a></li>
-									<li><i class="fa fa-user-o" aria-hidden="true"></i><span>by</span><a href="https://demo.themegoals.com/html/ideabox/blog_list.html#">{{article.user_id}}</a></li>
+									<li><i class="fa fa-calendar-check-o" aria-hidden="true"></i><a>{{article.article_date}}</a></li>
+									<li><i class="fa fa-user-o" aria-hidden="true"></i><span>by</span><a>{{article.user_id}}</a></li>
 								</ul>
-								<div class="post-desc"><p>{{article.description}}</p></div>
+								<div class="post-desc">{{article.description}}</div>
 							</div>
 						</article>
-						<div class="page-navigation">
+						<!-- <div class="page-navigation">
 							<span class="page-numbers current">1</span>
 							<a href="#" class="page-numbers">2</a>
 							<a href="#" class="page-numbers">3</a>
-						</div>
+						</div> -->
 					</div>
-
+					<div class="col-md-4 sidebar">
+						<aside class="widget widget-search">
+							<form id="widgetForm">
+						  		<input type="text" value="" name="s" placeholder="Type your keyword...">
+						    	<button type="submit" value=""><i class="fa fa-search" aria-hidden="true"></i></button>
+						  	</form>
+						</aside><!-- .widget-search -->
+						<aside class="widget widget-popular">
+							<h3 class="widget-title">Popular Posts</h3>
+							<ul>
+								<li>
+									<a href="https://demo.themegoals.com/html/ideabox/blog_list.html#"><img src="./ideabox_files/popular-post-01.jpg" alt=""></a>
+									<h4><a href="https://demo.themegoals.com/html/ideabox/blog_list.html#">16 Productivity Tips Every Designer Needs to Know</a></h4>
+								</li>
+								<li>
+									<a href="https://demo.themegoals.com/html/ideabox/blog_list.html#"><img src="./ideabox_files/popular-post-02.jpg" alt=""></a>
+									<h4><a href="https://demo.themegoals.com/html/ideabox/blog_list.html#">Audio Post World of Education For Next Generation</a></h4>
+								</li>
+								<li>
+									<a href="https://demo.themegoals.com/html/ideabox/blog_list.html#"><img src="./ideabox_files/popular-post-03.jpg" alt=""></a>
+									<h4><a href="https://demo.themegoals.com/html/ideabox/blog_list.html#">Quote Post World of Education For Next Generation</a></h4>
+								</li>
+								<li>
+									<a href="https://demo.themegoals.com/html/ideabox/blog_list.html#"><img src="./ideabox_files/popular-post-04.jpg" alt=""></a>
+									<h4><a href="https://demo.themegoals.com/html/ideabox/blog_list.html#">Link Post World of Education dorem ipsum Next Generation</a></h4>
+								</li>
+								<li>
+									<a href="https://demo.themegoals.com/html/ideabox/blog_list.html#"><img src="./ideabox_files/popular-post-05.jpg" alt=""></a>
+									<h4><a href="https://demo.themegoals.com/html/ideabox/blog_list.html#">Gallery Post World of Education For Next Generation</a></h4>
+								</li>
+							</ul>
+						</aside><!-- .widget-search -->
+						<aside class="widget widget-recent">
+							<h3 class="widget-title">Recent Posts</h3>
+							<ul>
+								<li><a href="https://demo.themegoals.com/html/ideabox/blog_list.html#">Ecommerce Product Liability 101: Protecting Yourself &amp; Your Business</a></li>
+								<li><a href="https://demo.themegoals.com/html/ideabox/blog_list.html#">10 Ways to Combine Artistic and Scientific Thinking</a></li>
+								<li><a href="https://demo.themegoals.com/html/ideabox/blog_list.html#">How to Rule Social Media Armed with Only Your iPhone</a></li>
+								<li><a href="https://demo.themegoals.com/html/ideabox/blog_list.html#">10 Beautiful Typography Trends to Try in 2016</a></li>
+								<li><a href="https://demo.themegoals.com/html/ideabox/blog_list.html#">16 Productivity Tips Every Designer Needs to Know</a></li>
+							</ul>
+						</aside><!-- .widget-search -->
+					</div>
 				</div>
 			</div><!-- .container -->
 		</main><!-- .site-main -->

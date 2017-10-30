@@ -3,7 +3,7 @@ import { Http, Response, RequestOptions, Headers } from '@angular/http';
 import 'rxjs/add/operator/map';
 
 @Injectable()
-export class AuthService {
+export class AuthServiceLogin {
 
   public token : any;
   

@@ -3,20 +3,20 @@
 		<header id="header" class="site-header">
 			<div class="container">
 				<div class="site-brand">
-					<a href="index.html"><img src="assets/images/logo_myprihatin.png" alt=""></a>
+					<a routerLink="/home"><img src="assets/images/logo_myprihatin.png" alt=""></a>
 				</div><!-- .site-brand -->
 				<div class="right-header">					
 					<nav class="main-menu">
 						<button class="c-hamburger c-hamburger--htx"><span></span></button>
 						<ul>
 							<li>
-								<a routerLink="/">Utama</a>
+								<a routerLink="/home">Utama</a>
 							</li>
 							<li>
 								<a router="/about">Tentang Kami</a>
 							</li>
 							<li>
-								<a href="#">Program<i class="fa fa-caret-down" aria-hidden="true"></i></a>
+								<a>Program<i class="fa fa-caret-down" aria-hidden="true"></i></a>
 								<ul class="sub-menu">
 									<li><a href="#">Prihatin Kesihatan</a></li>
 									<li><a href="#">Prihatin Kasih</a></li>
@@ -28,9 +28,9 @@
 						</ul>
 					</nav><!-- .main-menu -->
 					<div class="search-icon">
-						<a href="https://demo.themegoals.com/html/ideabox/#" class="ion-ios-search-strong"></a>
+						<a class="ion-ios-search-strong"></a>
 						<div class="form-search"></div>
-						<form action="https://demo.themegoals.com/html/ideabox/#" method="POST" id="searchForm">
+						<form id="searchForm">
 					  		<input type="text" value="" name="search" placeholder="Search...">
 					    	<button type="submit" value=""><span class="ion-ios-search-strong"></span></button>
 					  	</form>
@@ -47,7 +47,7 @@
 			<div class="page-title background-campaign" *ngIf="popular">
 				<div class="container">
 				<div class="col-md-2 col-xs-2 main-author">
-				<a class="main-author-icon" href="https://demo.themegoals.com/html/ideabox/#"><img src="assets/images/aktiviti/admin.png" alt=""></a>
+				<a class="main-author-icon"><img src="assets/images/aktiviti/admin.png" alt=""></a>
 				<div class="process-pledged"><span>by {{popular.organiser}}</span></div>
 				<div class="process-pledged"><span>5 Created</span></div>
 
@@ -98,25 +98,6 @@
 								<span class="sr-only">Next</span>
 								</a>
 								</div>
-													<!--<div id="owl-campaign" class="campaign-slider owl-carousel owl-theme" style="opacity: 1; display: block;">
-									<div class="owl-wrapper-outer">
-									<div class="owl-wrapper" style="width: 3330px; left: 0px; display: block;">
-									<div class="owl-item" style="width: 555px;">
-									<div class="item"><img src="assets/images/campaign/pic1.jpg" alt="">
-									</div></div>
-									</div>
-									</div>
-								<div class="owl-controls clickable">
-								<div class="owl-pagination">
-								<div class="owl-page active" style="background: url(assets/images/campaign/pic1.jpg) 0% 0% / cover;">
-								<span class=""></span></div>
-								<div class="owl-page" style="background: url(assets/images/campaign/pic1.jpg) 0% 0% / cover;">
-								<span class=""></span></div>
-								<div class="owl-page" style="background: url(assets/images/campaign/pic1.jpg) 0% 0% / cover;"><span class=""></span></div>
-								</div>
-								<div class="owl-buttons"><div class="owl-prev"><span class="ion-ios-arrow-back"></span></div><div class="owl-next"><span class="ion-ios-arrow-forward"></span></div></div>
-								</div>
-								</div>-->
 							</div>
 							<div class="campaign-box">
 								<div class="campaign-author clearfix">

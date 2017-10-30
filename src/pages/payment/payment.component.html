@@ -10,13 +10,13 @@
 						<button class="c-hamburger c-hamburger--htx"><span></span></button>
 						<ul>
 							<li>
-								<a href="">Utama</a>
+								<a routerLink="/home">Utama</a>
 							</li>
 							<li>
-								<a href="aboutus.htm">Tentang Kami</a>
+								<a routerLink="/about">Tentang Kami</a>
 							</li>
 							<li>
-								<a href="#">Program<i class="fa fa-caret-down" aria-hidden="true"></i></a>
+								<a>Program<i class="fa fa-caret-down" aria-hidden="true"></i></a>
 								<ul class="sub-menu">
 									<li><a href="#">Prihatin Kesihatan</a></li>
 									<li><a href="#">Prihatin Kasih</a></li>
@@ -28,16 +28,16 @@
 						</ul>
 					</nav><!-- .main-menu -->
 					<div class="search-icon">
-						<a href="https://demo.themegoals.com/html/ideabox/#" class="ion-ios-search-strong"></a>
+						<a class="ion-ios-search-strong"></a>
 						<div class="form-search"></div>
-						<form action="https://demo.themegoals.com/html/ideabox/#" method="POST" id="searchForm">
+						<form id="searchForm">
 					  		<input type="text" value="" name="search" placeholder="Search...">
 					    	<button type="submit" value=""><span class="ion-ios-search-strong"></span></button>
 					  	</form>
 					</div>	
 
 					<div class="login login-button">
-						<a href="#" class="btn-primary">Login</a>
+						<a routerLink="/login" class="btn-primary">Login</a>
 					</div><!-- .login -->
 				</div><!--. right-header -->
 			</div><!-- .container -->
@@ -118,7 +118,7 @@
 			<input type="checkbox" value="1" class="checkbox-signup">
 			<p class="signup-letter">Remember this card for future pledges</p>
 			</div>
-			<a href="#" class="btn-primary">Pledge</a>
+			<a class="btn-primary">Pledge</a>
 			</div>
 			<div class="col-md-4 col-xs-4 payment-information">
 			</div>

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthService } from '../../provider/auth/auth.service';
+import { AuthServiceLogin } from '../../provider/auth/auth.service';
 
 @Component({
   selector: 'app-register',
@@ -11,7 +11,7 @@ export class RegisterComponent implements OnInit {
 
   reg : any = {};
 
-  constructor(public router: Router, public authServices: AuthService) { 
+  constructor(public router: Router, public authServices: AuthServiceLogin) { 
 
   }
 

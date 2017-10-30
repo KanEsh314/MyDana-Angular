@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../../provider/http/http.service'; 
-import { AuthService } from '../../provider/auth/auth.service';
+import { AuthServiceLogin } from '../../provider/auth/auth.service';
 import { ToastsManager } from 'ng2-toastr/ng2-toastr';
 import { ViewContainerRef } from '@angular/core';
 
@@ -14,7 +14,7 @@ export class ProfileComponent implements OnInit {
   private id : number = 2;
   userInfo : any = {};
 
-  constructor(public authServices: AuthService, public httpServices: HttpService,public toastr: ToastsManager, public vcr: ViewContainerRef) {
+  constructor(public authServices: AuthServiceLogin, public httpServices: HttpService,public toastr: ToastsManager, public vcr: ViewContainerRef) {
     this.toastr.setRootViewContainerRef(vcr);
   }
 

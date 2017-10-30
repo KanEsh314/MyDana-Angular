@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../../provider/auth/auth.service';
+import { AuthServiceLogin } from '../../provider/auth/auth.service';
 import { Router } from '@angular/router'; 
+
+import { AuthService, SocialUser } from "angular4-social-login";
+import { FacebookLoginProvider, GoogleLoginProvider } from "angular4-social-login";
 
 @Component({
   selector: 'app-login',
@@ -11,7 +14,10 @@ export class LoginComponent implements OnInit {
 
   model: any = {};
 
-  constructor(public authServices: AuthService, public router: Router){
+  private user: SocialUser;
+  private loggedIn: boolean;
+
+  constructor(public authServices: AuthServiceLogin, public router: Router, public authServicesSocial: AuthService){
 
   }
 
@@ -32,6 +38,34 @@ export class LoginComponent implements OnInit {
       console.log(err);
       console.log("Fail");
     });
+  }
+
+  getFBLogged(){
+    this.authServicesSocial.signIn(FacebookLoginProvider.PROVIDER_ID);
+
+    //Subscribe
+    this.authServicesSocial.authState.subscribe((user) => {
+      this.user = user;
+      this.loggedIn = (user != null);
+    },(err)=> {
+      console.log(err);
+    });
+  }
+
+  getGLogged(){
+    this.authServicesSocial.signIn(GoogleLoginProvider.PROVIDER_ID);
+  
+    //Subscribe
+    this.authServicesSocial.authState.subscribe((user) => {
+      this.user = user;
+      this.loggedIn = (user != null);
+    },(err)=> {
+      console.log(err);
+    });
+  }
+
+  logOut(){
+    this.authServicesSocial.signOut();
   }
 
 }

@@ -39,6 +39,12 @@
 					<div class="login login-button">
 						<a class="btn-primary" routerLink="/login" >Login</a>
 					</div><!-- .login -->
+					<div class="login login-button" *ngIf="user">
+						<a class="btn-primary">{{user.name}}</a>
+					</div><!-- .login -->
+					<div class="login login-button" *ngIf="user">
+						<a class="btn-primary" (click)="logOut()">Log Out</a>
+					</div><!-- .login -->
 				</div><!--. right-header -->
 			</div><!-- .container -->
 		</header><!-- .site-header -->
@@ -70,8 +76,13 @@
 								
 			  				</div>
 			  				<div class="inline clearfix">
-						  		<button type="submit" value="Send Messager" class="btn-primary" (click)="getLogged()">Login</button>
-						  		
+						  		<button type="submit" value="Login" class="btn-primary" (click)="getLogged()">Login</button>
+						  	</div>
+						  	<div class="inline clearfix">
+						  		<button type="submit" value="FBLogin" class="btn-primary" (click)="getFBLogged()">Log With Facebook</button>
+						  	</div>
+						  	<div class="inline clearfix">
+						  		<button type="submit" value="FBLogin" class="btn-primary" (click)="getGLogged()">Log With Google+</button>
 						  	</div>
 							<div class="inline clearfix">
 							<p>Not a member yet? <a routerLink="/register">Register Now</a></p>
