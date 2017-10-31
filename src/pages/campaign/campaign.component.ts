@@ -11,6 +11,7 @@ export class CampaignComponent implements OnInit {
 
   private campaign;
   popular : any;
+  comment : any;
   
   camp: any = {};
 
@@ -45,23 +46,31 @@ export class CampaignComponent implements OnInit {
       console.log(err);
     })
 
+    //Comment
+    this.httpServices.getComment(this.campaign).subscribe(data => {
+      this.comment = data.data;
+    }, (err) => {
+      console.log(err);
+    });
+
   }
 
   postComment(){
 
-    let com = {
-      title : this.camp.textTitle,
+    let comm = {
       desc : this.camp.textMsg,
       user_id : 2,
       campaign_id : this.campaign
     }
 
-    this.httpServices.postComment(com, this.campaign).then(data => {
+    console.log(comm);
+
+    this.httpServices.postComment(comm, this.campaign).then(data => {
+      console.log("Success");
       console.log(data);
     }, (err) => {
       console.log(err);
-    })
-
+    });
   }
 
 }

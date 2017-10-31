@@ -65,7 +65,7 @@
 					<div class="campaign">
 						<div class="campaign-item clearfix">
 							<div class="campaign-image">
-							<div id="myCarousel" class="carousel slide" data-ride="carousel">
+								<div id="myCarousel" class="carousel slide" data-ride="carousel">
 								<!-- Indicators -->
 								<ol class="carousel-indicators">
 								<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -180,15 +180,33 @@
 									<div id="backer" class="tabs active">
 										<div class="field">
 			  								<p>
-			  									<input type="text" placeholder="Title" id="textTitle" [(ngModel)]="camp.textTitle" name="textTitle" #textTitle="ngModel">
-			  								</p>
-			  								<p>
 			  									<input type="text" placeholder="Leave a message" [(ngModel)]="camp.textMsg" name="textMsg" #textMsg="ngModel" />
 			  								</p>
 			  								<p>
     											<a class="btn-primary" (click)="postComment()">Post Comment</a>
     										</p>
 			  							</div>
+
+			  							<div id="comment" class="comment-area" *ngFor="let com of comment">
+											<h3 class="comments-title"></h3>
+											<ol class="comments-list">
+												<li class="comment clearfix"> 
+													<div class="comment-body">
+													<div class="comment-avatar"><img src="./ideabox_files/comment.jpg" alt=""></div>
+													<div class="comment-info">
+														<header class="comment-meta"></header>
+														<cite class="comment-author">{{com.commenter.user}}</cite>
+														<div class="comment-inline">
+															<span class="comment-date">2 days ago</span>
+															<a href="https://demo.themegoals.com/html/ideabox/blog_details.html#" class="comment-reply">Reply</a>
+														</div>
+														<div class="comment-content"><p>{{com.desc}}</p></div>
+													</div>
+													</div>
+												</li>
+											</ol>
+										</div>
+
 									</div>
 									<div id="faq" class="tabs">
 										<h2>Frequently Asked Questions</h2>

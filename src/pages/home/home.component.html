@@ -3,7 +3,7 @@
 		<header id="header" class="site-header">
 			<div class="container">
 				<div class="site-brand">
-					<a href="index.html"><img src="../assets/images/logo_myprihatin.png" alt=""></a>
+					<a routerLink="/home"><img src="../assets/images/logo_myprihatin.png" alt=""></a>
 				</div><!-- .site-brand -->
 				<div class="right-header">					
 					<nav class="main-menu">
@@ -30,7 +30,7 @@
 					<div class="search-icon">
 						<a href="https://demo.themegoals.com/html/ideabox/#" class="ion-ios-search-strong"></a>
 						<div class="form-search"></div>
-						<form action="https://demo.themegoals.com/html/ideabox/#" method="POST" id="searchForm">
+						<form id="searchForm">
 					  		<input type="text" value="" name="search" placeholder="Search...">
 					    	<button type="submit" value=""><span class="ion-ios-search-strong"></span></button>
 					  	</form>
@@ -125,7 +125,9 @@
 							</div>
 						</div>
 					</div>
-					<div class="latest-button wow fadeInUp" data-wow-delay=".4s"><a class="btn-primary" routerLink="/article">Lihat Program</a></div>
+					<div class="latest-button wow fadeInUp" data-wow-delay=".4s">
+						<a class="btn-primary" routerLink="/article">Lihat Program</a>
+					</div>
 				</div>
 			</div>
 			<br/>

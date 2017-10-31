@@ -33,10 +33,8 @@ export class LoginComponent implements OnInit {
 
     this.authServices.loginAccount(details).then(result => {
       console.log(result);
-      console.log("Success");
     },(err) => {
       console.log(err);
-      console.log("Fail");
     });
   }
 
@@ -58,6 +56,7 @@ export class LoginComponent implements OnInit {
     //Subscribe
     this.authServicesSocial.authState.subscribe((user) => {
       this.user = user;
+      console.log(user);
       this.loggedIn = (user != null);
     },(err)=> {
       console.log(err);

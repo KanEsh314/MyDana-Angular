@@ -40,8 +40,8 @@
 						<a class="btn-primary" routerLink="/login" >Login</a>
 					</div><!-- .login -->
 					<div class="login login-button" *ngIf="user">
-						<a class="btn-primary">{{user.name}}</a>
-					</div><!-- .login -->
+            			<a class="btn-primary">{{user.name}}</a>
+        			</div>
 					<div class="login login-button" *ngIf="user">
 						<a class="btn-primary" (click)="logOut()">Log Out</a>
 					</div><!-- .login -->

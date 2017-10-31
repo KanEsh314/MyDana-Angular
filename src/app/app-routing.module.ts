@@ -10,6 +10,7 @@ import { CampaignComponent } from '../pages/campaign/campaign.component';
 import { AboutComponent } from '../pages/about/about.component';
 import { ProfileComponent } from '../pages/profile/profile.component';
 import { ArticlesComponent } from '../pages/articles/articles.component';
+import { ArticleDetailsComponent } from '../pages/article-details/article-details.component';
 
 const routes : Routes = [
 	{ path : '', redirectTo: 'home', pathMatch: 'full' },
@@ -20,7 +21,8 @@ const routes : Routes = [
 	{ path : 'payment', component: PaymentComponent },
 	{ path : 'about', component: AboutComponent },
 	{ path : 'profile', component: ProfileComponent },
-	{ path : 'article', component: ArticlesComponent }
+	{ path : 'article', component: ArticlesComponent },
+	{ path : 'articledetail', component: ArticleDetailsComponent }
 	];
 
 	@NgModule({

@@ -6,7 +6,7 @@ import 'rxjs/add/operator/map';
 export class HttpService {
 
   constructor(public http: Http) { 
-  	console.log("Http Service Is Working...")
+  	//console.log("Http Service Is Working...")
   }
 
   getBanner(){
@@ -61,6 +61,11 @@ export class HttpService {
 
   getNews(id){
     return this.http.get('https://mydana.herokuapp.com/api/campaign/'+id+'/campaignnew')
+    .map((res:Response) => res.json());
+  }
+
+  getComment(id){
+    return this.http.get('https://mydana.herokuapp.com/api/campaign/'+id+'/campaigncomment')
     .map((res:Response) => res.json());
   }
 

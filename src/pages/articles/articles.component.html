@@ -58,8 +58,8 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-8 main-content">
-						<article *ngFor="let article of articles">
-							<a class="overlay" href="blog-detail.htm">
+						<article *ngFor="let article of articles" class="post">
+							<a class="overlay" routerLink="/articledetail">
 								<img src="{{article.header_image}}" alt="">
 								<span class="ion-ios-search-strong"></span>
 							</a>
