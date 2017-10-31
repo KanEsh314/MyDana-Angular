@@ -66,7 +66,6 @@ export class CampaignComponent implements OnInit {
     console.log(comm);
 
     this.httpServices.postComment(comm, this.campaign).then(data => {
-      console.log("Success");
       console.log(data);
     }, (err) => {
       console.log(err);

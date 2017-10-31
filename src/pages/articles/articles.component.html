@@ -58,18 +58,18 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-8 main-content">
-						<article *ngFor="let article of articles" class="post">
+						<article *ngIf="articles" class="post">
 							<a class="overlay" routerLink="/articledetail">
-								<img src="{{article.header_image}}" alt="">
+								<img src="{{articles.header_image}}" alt="">
 								<span class="ion-ios-search-strong"></span>
 							</a>
 							<div class="post-info">
-								<h3 class="post-title"><a href="https://demo.themegoals.com/html/ideabox/blog_details.html">{{article.article_title}}</a></h3>
+								<h3 class="post-title"><a href="https://demo.themegoals.com/html/ideabox/blog_details.html">{{articles.article_title}}</a></h3>
 								<ul class="post-meta">
-									<li><i class="fa fa-calendar-check-o" aria-hidden="true"></i><a>{{article.article_date}}</a></li>
-									<li><i class="fa fa-user-o" aria-hidden="true"></i><span>by</span><a>{{article.user_id}}</a></li>
+									<li><i class="fa fa-calendar-check-o" aria-hidden="true"></i><a>{{articles.article_date}}</a></li>
+									<li><i class="fa fa-user-o" aria-hidden="true"></i><span>by</span><a>{{articles.user_id}}</a></li>
 								</ul>
-								<div class="post-desc">{{article.description}}</div>
+								<div class="post-desc">{{articles.description}}</div>
 							</div>
 						</article>
 						<!-- <div class="page-navigation">
