@@ -14,7 +14,7 @@ export class LoginComponent implements OnInit {
 
   model: any = {};
 
-  private user: SocialUser;
+  user: SocialUser;
   private loggedIn: boolean;
 
   constructor(public authServices: AuthServiceLogin, public router: Router, public authServicesSocial: AuthService){
