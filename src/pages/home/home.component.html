@@ -1,203 +1,268 @@
-<div class="home" cz-shortcut-listen="true">
-	<div id="wrapper">
-		<header id="header" class="site-header">
-			<div class="container">
-				<div class="site-brand">
-					<a routerLink="/home"><img src="../assets/images/logo_myprihatin.png" alt=""></a>
-				</div><!-- .site-brand -->
-				<div class="right-header">					
-					<nav class="main-menu">
-						<button class="c-hamburger c-hamburger--htx"><span></span></button>
-						<ul>
-							<li>
-								<a routerLink="/">Utama</a>
-							</li>
-							<li>
-								<a routerLink="/about">Tentang Kami</a>
-							</li>
-							<li>
-								<a >Program<i class="fa fa-caret-down" aria-hidden="true"></i></a>
-								<ul class="sub-menu">
-									<li><a >Prihatin Kesihatan</a></li>
-									<li><a >Prihatin Kasih</a></li>
-									<li><a >Prihatin Amal</a></li>
-									<li><a >Prihatin Komuniti</a></li>
-									<li><a >Prihatin Ilmu</a></li>
-								</ul>
-							</li>
-						</ul>
-					</nav><!-- .main-menu -->
-					<div class="search-icon">
-						<a href="https://demo.themegoals.com/html/ideabox/#" class="ion-ios-search-strong"></a>
-						<div class="form-search"></div>
-						<form id="searchForm">
-					  		<input type="text" value="" name="search" placeholder="Search...">
-					    	<button type="submit" value=""><span class="ion-ios-search-strong"></span></button>
-					  	</form>
-					</div>	
+<div>
+<nav class="navbar navbar-default" style="background:#292929; opacity:0.5;">
+		<div class="container-fluid pl50 pr50">
+		  <!-- Brand and toggle get grouped for better mobile display -->
+		  <div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			  <span class="sr-only">Toggle navigation</span>
+			  <span class="icon-bar"></span>
+			  <span class="icon-bar"></span>
+			  <span class="icon-bar"></span>
+			</button>
+			<a href="index.html">
+				<img class="logo logo-light ml" alt="My Prihatin" src="assets/images/logo-light.png">
+			</a>
+		  </div>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a routerLink="/about" class="fc">MAKLUMAT</a></li>
+			  <li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style='color:white; font-family:"Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 11px'>PROGRAM <span class="caret"></span></a>
+				<ul class="dropdown-menu" style="background: #292929;">
+				  <li><a href="#" class="dpd">PRIHATIN KESIHATAN</a></li>
+				  <li><a href="#" class="dpd">PRIHATIN KASIH</a></li>
+				  <li><a href="#" class="dpd">PRIHATIN AMAL</a></li>
+					<li><a href="#" class="dpd">PRIHATIN KOMUNITI</a></li>
+					<li><a href="#" class="dpd">PRIHATIN ILMU</a></li>
+				</ul>
+			  </li>
+			  <li><a href="login.htm" class="fc">DAFTAR MASUK</a></li>
+			</ul>
+		</div><!-- /.container-fluid -->
+	</nav>
+	  
+	  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+		<!-- Indicators -->
+		<ol class="carousel-indicators indicators">
+		  <li data-target="#carousel-example-generic " class="active" data-slide-to="0"></li>
+		  <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+		  <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+		</ol>
+	  
+		<!-- Wrapper for slides -->
+		<div class="carousel-inner" style="height:100vh;"role="listbox">
+		  	<div class="item active" *ngFor="let banner of banners">
+				<img src="{{banner.banner_image}}" alt="..." class="img-responsive">
+				<div class="centered5">{{banner.title}}</div>
+				<div class="centered6">{{banner.banner_desc}}</div>
+			</div>
+		</div>
+	  
+		<!-- Controls -->
+		<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+		  <span class="fa fa-arrow-left arrow" aria-hidden="true"></span>
+		  <span class="sr-only">Previous</span>
+		</a>
+		<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+		  <span class="fa fa-arrow-right arrow" aria-hidden="true"></span>
+		  <span class="sr-only">Next</span>
+		</a>
+	  </div>
+	
+	<!--Top navbar-->
 
-					<div class="login login-button">
-						<a class="btn-primary" routerLink="/login">Login</a>
-						<a class="btn-primary" routerLink="/profile">Profile</a>
-					</div><!-- .login -->
-				</div><!--. right-header -->
-			</div><!-- .container -->
-		</header><!-- .site-header -->
 
-		<main id="main" class="site-main">
-			<div class="sideshow">
+			<section>
 				<div class="container">
-					<div class="sideshow-content">
-						<h4 class="wow fadeInUp" data-wow-delay=".2s">BERSAMA KITA MEMBANTU MEREKA YANG MEMERLUKAN</h4>
-						<img alt="pic" src="../assets/images/text-seringgit.png">
-						<div class="sideshow-description wow fadeInUp" data-wow-delay=".3s">Pasangan kembar Muhammad Alimi Aliff dan 	Muhmmad Azizi Aliff di antara 425 penerima yang telah berjaya dibantu </div>
-						<div class="button wow fadeInUp" data-wow-delay="0.3s">
-							<a class="btn-secondary" routerLink="/payment">Derma Sekarang</a>
-						</div>
-					</div><!-- .sideshow-content -->
-				</div>
-			</div><!-- .sideshow -->
-			<!--current campaign-->
-			<!--Jumlah sumbangan -->
-			<div class="popular current-collection hidden-dekstop">
-			<div class="container">
-			<h4 class="wow fadeInUp" data-wow-delay=".2s">Jutaan terima kasih kepada anda yang prihatin dan terus menyokong usaha kami dalam membantu mereka yang kurang berkemampuan</h4>
-			<div class="col-md-12 current-campaign-pic">
-			<img src="../assets/images/aktiviti/aktiviti02.jpg" class="img-current-campaign" alt="">
-			</div>
-			<br/>
-			<div class="process wow fadeInUp" data-scroll-nav="1">
-							<div class="raised"><span style="width: 90%;"></span></div>
-							<div class="process-info">
-								<div class="process-funded"><span><h6>RM963,000</h6></span>Telah dibelanjakan untuk aktiviti tahun 2016 dalam pelbagai jenis bantuan seperti wang tunai, barangan keperluan, kesihatan, perubatan dan seumpamanya serta pembangunan aplikasi MyDana</div>
-								<div class="process-centered"><i class="icon color-primary mt8 mt-xs-0 ti ti-loop icon-lg" style="color:white;"></i></div>
-								<div class="process-funded-right"><span><h6>425 & 460</h6></span>425 individu dan 460 keluarga telah menerima bantuan yang terdiri daripada pelbagai lapisan masyarakat tanpa mengira umur, bangsa dan agama</div>
-							</div>
-						</div>
-			<div class="latest-button-campaign wow fadeInUp" data-wow-delay=".4s"><a href="#" class="btn-primary">Semua Campaign</a></div>
-			</div>
-			</div>
-			<div class="popular current-collection hidden-mobile">
-			<div class="container">
-			<h4 class="wow fadeInUp" data-wow-delay=".2s">Mobile Jutaan terima kasih kepada anda yang prihatin dan terus menyokong usaha kami dalam membantu mereka yang kurang berkemampuan</h4>
-			<div class="col-xs-12 current-campaign-pic">
-			<img src="../assets/images/aktiviti/aktiviti02.jpg" class="img-current-campaign" alt="">
-			</div>
-			<br/>
-			<div class="process wow fadeInUp" data-scroll-nav="1">
-							<div class="raised"><span style="width: 90%;"></span></div>
-							<div class="process-info">
-								<div class="process-funded col-xs-12"><span><h6>RM963,000</h6></span>Telah dibelanjakan untuk aktiviti tahun 2016 dalam pelbagai jenis bantuan seperti wang tunai, barangan keperluan, kesihatan, perubatan dan seumpamanya serta pembangunan aplikasi MyDana</div>
-								<div class="process-funded-right col-xs-12"><span><h6>425 & 460</h6></span>425 individu dan 460 keluarga telah menerima bantuan yang terdiri daripada pelbagai lapisan masyarakat tanpa mengira umur, bangsa dan agama</div>
-							</div>
-						</div>
-			</div>
-			</div>
-			<!--end jumlah sumbangan-->
-			<div class="popular campaign" >
-				<div class="container">
-					<h2 class="title wow fadeInUp" data-wow-delay=".2s">PROGRAM-PROGRAM YAYASAN</h2>
-					<div class="description wow fadeInUp" data-wow-delay=".4s"></div>
-					<div class="campaign-content">
-						<div class="row">
-							<div class="col-md-4" *ngFor="let newsLatest of latest" (click)="getCampaign(newsLatest.campaign_id)">
-								<div class="campaign-item wow fadeInUp" data-wow-delay=".1s">
-									<a class="overlay">
-										<img src="{{newsLatest.campaign_image}}" alt="">
-										<span class="ion-ios-search-strong"></span>
-									</a>
-									<div class="campaign-box">
-										<a href="https://demo.themegoals.com/html/ideabox/#" class="category"></a>
-										<h3><a href="https://demo.themegoals.com/html/ideabox/campaign_detail.html">{{newsLatest.campaign_name}}</a></h3>
-										<div class="campaign-description">
-										{{newsLatest.description}}
-										</div>
-										<div class="campaign-author"><a class="author-icon" href="https://demo.themegoals.com/html/ideabox/#"><img src="../assets/images/aktiviti/admin.png" alt=""></a>by <a class="author-name" href="https://demo.themegoals.com/html/ideabox/#">{{newsLatest.organiser}}</a></div>
-										<div class="process">
-											<div class="raised"><span style="width: 142.594px;"></span></div>
-											<div class="process-info">
-												<div class="process-pledged"><span>Date Publish</span>{{newsLatest.campaign_start_date}}</div>
-												<div class="process-funded2"><span>Location</span>{{newsLatest.location}}</div>
-											</div>
-										</div>
+					<div class="row text-center">
+						<h4 class="uppercase mb80 f40">KEMPEN TERKINI</h4>
+						<div class="col-sm-6 col-md-4" *ngFor="let latest of latests">
+							<div class="campaign-item wow fadeInUp" data-wow-delay=".1s">
+								<a class="overlay" href="campaignlist.htm">
+									<img src="assets/images/aktiviti/aktiviti01.jpg" alt="">
+									<span class="ion-ios-search-strong"></span>
+								</a>
+								<div class="campaign-box">
+									<a href="https://demo.themegoals.com/html/ideabox/#" class="category">Aktiviti Kemasyarakatan</a>
+									<h3><a href="https://demo.themegoals.com/html/ideabox/campaign_detail.html">PRIHATIN KESIHATAN</a></h3>
+									<div class="campaign-description">Aktiviti teras dan utama MyPrihatin dalam membantu pesakit kronik. Kerjasama erat MyPrihatin bersama Yayasan IJN dan PPUKM.</div>
+									<div class="process">
+										<div class="raised"><span style="width: 142.594px;"></span></div>
+									</div>
+									<div style="text-align: left">
+										<p>
+											<span style="font-weight:600">RM 4,890</span> terkumpul setakat ini</p>
+										<p>
+											<span style="font-weight:600">80%</span> tepati sasaran</p>
+										<p>
+											<span style="font-weight:600">5</span> hari lagi</p>
+									</div>
+									<hr>
+									<div class="row" style="padding:0">
+										<div class="col-md-4"><i class="fa fa-comment" aria-hidden="true"></i><span> 123</span></div>
+										<div class="col-md-4"><i class="fa fa-eye" aria-hidden="true"></i><span> 123</span></div>
+										<div class="col-md-4" style="text-align:right"><i class="fa fa-share" aria-hidden="true"></i></div>
 									</div>
 								</div>
 							</div>
 						</div>
+						<div class="col-sm-6 col-md-4">
+							<div class="campaign-item wow fadeInUp" data-wow-delay=".1s">
+								<a class="overlay" href="campaignlist.htm">
+									<img src="assets/images/aktiviti/aktiviti01.jpg" alt="">
+									<span class="ion-ios-search-strong"></span>
+								</a>
+								<div class="campaign-box">
+									<a href="https://demo.themegoals.com/html/ideabox/#" class="category">Aktiviti Kemasyarakatan</a>
+									<h3><a href="https://demo.themegoals.com/html/ideabox/campaign_detail.html">PRIHATIN KESIHATAN</a></h3>
+									<div class="campaign-description">Aktiviti teras dan utama MyPrihatin dalam membantu pesakit kronik. Kerjasama erat MyPrihatin bersama Yayasan IJN dan PPUKM.</div>
+									<div class="process">
+										<div class="raised"><span style="width: 142.594px;"></span></div>
+									</div>
+									<div style="text-align: left">
+										<p>
+											<span style="font-weight:600">RM 4,890</span> terkumpul setakat ini</p>
+										<p>
+											<span style="font-weight:600">80%</span> tepati sasaran</p>
+										<p>
+											<span style="font-weight:600">5</span> hari lagi</p>
+									</div>
+									<hr>
+									<div class="row" style="padding:0">
+										<div class="col-md-4"><i class="fa fa-comment" aria-hidden="true"></i><span> 123</span></div>
+										<div class="col-md-4"><i class="fa fa-eye" aria-hidden="true"></i><span> 123</span></div>
+										<div class="col-md-4" style="text-align:right"><i class="fa fa-share" aria-hidden="true"></i></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-4">
+							<div class="campaign-item wow fadeInUp" data-wow-delay=".1s">
+								<a class="overlay" href="campaignlist.htm">
+									<img src="assets/images/aktiviti/aktiviti01.jpg" alt="">
+									<span class="ion-ios-search-strong"></span>
+								</a>
+								<div class="campaign-box">
+									<a href="https://demo.themegoals.com/html/ideabox/#" class="category">Aktiviti Kemasyarakatan</a>
+									<h3><a href="https://demo.themegoals.com/html/ideabox/campaign_detail.html">PRIHATIN KESIHATAN</a></h3>
+									<div class="campaign-description">Aktiviti teras dan utama MyPrihatin dalam membantu pesakit kronik. Kerjasama erat MyPrihatin bersama Yayasan IJN dan PPUKM.</div>
+									<div class="process">
+										<div class="raised"><span style="width: 142.594px;"></span></div>
+									</div>
+									<div style="text-align: left">
+										<p>
+											<span style="font-weight:600">RM 4,890</span> terkumpul setakat ini</p>
+										<p>
+											<span style="font-weight:600">80%</span> tepati sasaran</p>
+										<p>
+											<span style="font-weight:600">5</span> hari lagi</p>
+									</div>
+									<hr>
+									<div class="row" style="padding:0">
+										<div class="col-md-4"><i class="fa fa-comment" aria-hidden="true"></i><span> 123</span></div>
+										<div class="col-md-4"><i class="fa fa-eye" aria-hidden="true"></i><span> 123</span></div>
+										<div class="col-md-4" style="text-align:right"><i class="fa fa-share" aria-hidden="true"></i></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<br>
 					</div>
-					<div class="latest-button wow fadeInUp" data-wow-delay=".4s">
-						<a class="btn-primary" routerLink="/article">Lihat Program</a>
+					<div class="row text-center">
+						<button class="mt80 btn btn-secondary">Tambah Lagi</button>
 					</div>
 				</div>
-			</div>
+			</section>
 			<br/>
-			<div class="partners">
-				<div class="container">
-					<div class="partners-slider owl-carousel owl-theme owl-loaded">
-				</div>
-			</div>	<!-- .partners -->
-		</div>
-		</main>
 
-		<footer id="footer" class="site-footer">
-			<div class="footer-menu hidden-dekstop">
-				<div class="container">
+			<section class="c666">
+					<div class="container">
+						<div class="row text-center">
+							<div class="f20 sw80">
+								<h3 class="fw">Yayasan MyPrihatin (MYPRIHATIN), ialah sebuah organisasi bukan berorientasikan keuntungan dan telah diluluskan
+										penubuhannya di bawah Akta Pemegang Amanah (Pemerbadanan) 1952 [Akta 258], Bahagian Hal Ehwal Undang-Undang, Jabatan
+										Perdana Menteri (BHEUU, JPM) pada 4 April 2015. 
+								</h3>
+						</div>
+						<div class="row text-center">
+							<button class="mt80 bw btn btn-secondary">Button</button>
+						</div>
+					</div>
+				</div>
+				</section>
+
+			<section class="apps" style="background-image: url('assets/images/apps.jpg')">
+				<div class="container mb00">
 					<div class="row">
-						<div class="col-md-5 col-xs-5">
-							<div class="footer-menu-item wow fadeInUp" data-wow-delay=".1s">
-								<h4>BERSAMA MEMBANTU MEREKA YANG MEMERLUKAN</h4>
-							</div>
+						<div class="col-md-5">
+							<img src="assets/images/iphone.png">
 						</div>
-						<div class="col-md-2 col-xs-2">
-							<div class="footer-menu-item-center wow fadeInUp" data-wow-delay=".1s">
-							<i class="fa fa-heartbeat icon-lg"></i>
-							<img>
-								
+						<div class="col-md-7">
+							<div class="row bblack pd10">
+								<h1 class="fs40">Applikasi my dana</h1><br>
+								<p class="f20">Yayasan MyPrihatin memperkenalkan aplikasi mudah alih MyDana sebagai platform untuk orang ramai menyalurkan bantuan secara atas talian</p>	
 							</div>
-						</div>
-						<div class="col-md-5 col-xs-5">
-							<div class="footer-menu-item-right wow fadeInUp" data-wow-delay=".1s">
-								<h3>Sebarang pertanyaan boleh dikemukan kepada Sekretariat kami melalui saluran dibawah:</h3>
-								<h2>tel: 03 2858 7637 <br/>email: admin@myprihatin.org.my</h2>
-								<div class="footer-submenu-item wow fadeInUp" data-wow-delay=".1s">
-								<h3><a href="http://fb.com/yayasanmyprihatin"><i class="fa fa-facebook-official"></i> YayasanMyPrihatin</a></h3>
-								<h3><a href="http://instagram.com/yayasanmyprihatin"><i class="fa fa-instagram"></i> @yayasanmyprihatin</a></h3>
+							<div class="row mt20" >
+								<div class="col-md-3"> 
+									<img src="assets/images/google-play-badge.png"/>
 								</div>
-								
+								<div class="col-md-3"> 
+									<img src="assets/images/appstore.png"/>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="footer-menu hidden-mobile">
-				<div class="container">
+			</section>
+
+			<section class="subscribe">
+				<div class="container mb00">
 					<div class="row">
-						<div class="col-xs-12">
-							<div class="footer-menu-item wow fadeInUp" data-wow-delay=".1s">
-								<h4>Mobile BERSAMA MEMBANTU MEREKA YANG MEMERLUKAN</h4>
-							</div>
+						<div class="col-md-6 tal">	
+							<h1 class="fs40 tcb">Get Fresh Update On Email</h1>
+							<p class="f20 tcb mt20">We'll never share your email address and you can opt out at any time, we promise</p>
 						</div>
-						<div class="col-xs-12">
-							<div class="footer-menu-item-right wow fadeInUp" data-wow-delay=".1s">
-								<h3>Sebarang pertanyaan boleh dikemukan kepada Sekretariat kami melalui saluran dibawah:</h3>
-								<h2>tel: 03 2858 7637 <br/>email: admin@myprihatin.org.my</h2>
-								<div class="footer-submenu-item wow fadeInUp" data-wow-delay=".1s">
-								<h3><a href="http://fb.com/yayasanmyprihatin"><i class="fa fa-facebook-official"></i> YayasanMyPrihatin</a></h3>
-								<h3><a href="http://instagram.com/yayasanmyprihatin"><i class="fa fa-instagram"></i> @yayasanmyprihatin</a></h3>
+						<div class="col-md-6 mt30">
+							<div class="row">
+								<div class="input-group margin-bottom-sm ml50">
+									<input class="bb" type="text" size="50"><button class="btn btn-secondary">Subscribe</button>
 								</div>
-								
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<!-- .footer-menu -->
-			<div class="footer-copyright">
-				<div class="container">
-					<p class="copyright">Yayasan MyPrihatin. All Rights Reserved.</p>
-					<a href="https://demo.themegoals.com/html/ideabox/#" class="back-top">Back to top<span class="ion-android-arrow-up"></span></a>
+			</section>
+
+		<footer id="footer" class="bg-primary pt96 pb96">
+			<div class="container">
+				<div class="row mb-64">
+					<div class="col-md-5 text-right text-left-xs wow fadeInUp" data-wow-delay=".1s">
+						<h2 class="uppercase bold italic">
+							BERSAMA MEMBANTU MEREKA YANG MEMERLUKAN
+						</h2>
+					</div>
+					<div class="col-md-2 hidden-sm hidden-xs text-center pt48 wow fadeInUp" data-wow-delay=".1s">
+						<i class="icon display-block fa fa-heartbeat icon-lg">
+							
+						</i>
+					</div>
+					<div class="col-md-5 col-sm-6 wow fadeInUp" data-wow-delay=".1s">
+						<p class="lead">Sebarang pertanyaan boleh dikemukakan kepada Sekretariat kami melalui saluran dibawah:
+							<br>
+						</p>
+						<h4 class="mb8">
+							tel: 03 2858 7637
+							<br>
+						</h4>
+						<h4 class="mb8">
+							email: admin@myprihatin.org.my
+							<br>
+						</h4>
+						<h4 class="mb0">
+							<a href="http://fb.com/yayasanmyprihatin">
+								<i class="fa fa-facebook-official">
+								</i>
+								YayasanMyPrihatin
+							</a>
+						</h4>
+						<h4 class="mb0">
+							<a href="http://instagram.com/yayasanmyprihatin">
+								<i class="fa fa-instagram">
+								</i>
+								@yayasanmyprihatin
+							</a>
+						</h4>
+					</div>
 				</div>
 			</div>
-		</footer>
-		</div>
-</div>
+		</footer><!-- site-footer -->
+	</div><!-- #wrapper -->

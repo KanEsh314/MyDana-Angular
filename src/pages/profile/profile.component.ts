@@ -14,8 +14,8 @@ export class ProfileComponent implements OnInit {
   private id : number = 2;
   userInfo : any = {};
 
-  constructor(public authServices: AuthServiceLogin, public httpServices: HttpService,public toastr: ToastsManager, public vcr: ViewContainerRef) {
-    this.toastr.setRootViewContainerRef(vcr);
+  constructor(public authServices: AuthServiceLogin, public httpServices: HttpService) {
+    
   }
 
   ngOnInit() {
@@ -46,7 +46,6 @@ export class ProfileComponent implements OnInit {
     console.log(upData);
 
     this.authServices.editAccount(upData).then(result => {
-      //this.toastr.success('You are awesome!', 'Success!');
       console.log("Success");
       console.log(result);
     }, (err) => {

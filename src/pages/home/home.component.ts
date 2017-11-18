@@ -9,8 +9,8 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-	banner : any;
-  latest : any;
+	banners : any;
+  latests : any;
 
   constructor(public httpServices: HttpService, public router: Router){
 
@@ -21,8 +21,7 @@ export class HomeComponent implements OnInit {
     //Banner
   	this.httpServices.getBanner()
     .subscribe(data => {
-      this.banner = data.data;
-      //console.log(this.banner[0].banner_image);
+      this.banners = data.data;
     }, (err) => {
       console.log(err);
     });
@@ -30,7 +29,7 @@ export class HomeComponent implements OnInit {
     //Latest
     this.httpServices.getLatest()
     .subscribe(data => {
-      this.latest = data.data;
+      this.latests = data.data;
       //console.log(this.latest);
     }, (err) => {
       console.log(err);

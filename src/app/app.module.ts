@@ -59,7 +59,7 @@ import { GoogleLoginProvider, FacebookLoginProvider } from "angular4-social-logi
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    SocialLoginModule
+    SocialLoginModule,
   ],
   providers: [
     HttpService,

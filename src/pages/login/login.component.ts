@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthServiceLogin } from '../../provider/auth/auth.service';
 import { Router } from '@angular/router'; 
-
 import { AuthService, SocialUser } from "angular4-social-login";
 import { FacebookLoginProvider, GoogleLoginProvider } from "angular4-social-login";
 
@@ -56,7 +55,6 @@ export class LoginComponent implements OnInit {
     //Subscribe
     this.authServicesSocial.authState.subscribe((user) => {
       this.user = user;
-      console.log(user);
       this.loggedIn = (user != null);
     },(err)=> {
       console.log(err);
@@ -65,6 +63,10 @@ export class LoginComponent implements OnInit {
 
   logOut(){
     this.authServicesSocial.signOut();
+  }
+
+  getToast(){
+
   }
 
 }
