@@ -1,71 +1,56 @@
 <div class="campaign-detail" cz-shortcut-listen="true">
 	<div id="wrapper">
-		<header id="header" class="site-header">
-			<div class="container">
-				<div class="site-brand">
-					<a routerLink="/home"><img src="assets/images/logo_myprihatin.png" alt=""></a>
-				</div><!-- .site-brand -->
-				<div class="right-header">					
-					<nav class="main-menu">
-						<button class="c-hamburger c-hamburger--htx"><span></span></button>
-						<ul>
-							<li>
-								<a routerLink="/home">Utama</a>
-							</li>
-							<li>
-								<a router="/about">Tentang Kami</a>
-							</li>
-							<li>
-								<a>Program<i class="fa fa-caret-down" aria-hidden="true"></i></a>
-								<ul class="sub-menu">
-									<li><a href="#">Prihatin Kesihatan</a></li>
-									<li><a href="#">Prihatin Kasih</a></li>
-									<li><a href="#">Prihatin Amal</a></li>
-									<li><a href="#">Prihatin Komuniti</a></li>
-									<li><a href="#">Prihatin Ilmu</a></li>
-								</ul>
-							</li>
+			<nav class="navbar navbar-default" style="background:#292929; opacity:0.5;">
+					<div class="container-fluid pl50 pr50">
+					  <!-- Brand and toggle get grouped for better mobile display -->
+					  <div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						  <span class="sr-only">Toggle navigation</span>
+						  <span class="icon-bar"></span>
+						  <span class="icon-bar"></span>
+						  <span class="icon-bar"></span>
+						</button>
+						<a routerLink="/">
+							<img class="logo logo-light ml" alt="My Prihatin" src="assets/images/logo-light.png">
+						</a>
+					  </div>
+						<ul class="nav navbar-nav navbar-right">
+							<li><a routerLink="/about" style='color:white; font-family:"Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 11px'>MAKLUMAT</a></li>
+						  <li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style='color:white; font-family:"Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 11px'>PROGRAM <span class="caret"></span></a>
+							<ul class="dropdown-menu" style="background: #292929;">
+							  <li><a href="#" class="dpd">PRIHATIN KESIHATAN</a></li>
+							  <li><a href="#" class="dpd">PRIHATIN KASIH</a></li>
+							  <li><a href="#" class="dpd">PRIHATIN AMAL</a></li>
+								<li><a href="#" class="dpd">PRIHATIN KOMUNITI</a></li>
+								<li><a href="#" class="dpd">PRIHATIN ILMU</a></li>
+							</ul>
+						  </li>
 						</ul>
-					</nav><!-- .main-menu -->
-					<div class="search-icon">
-						<a class="ion-ios-search-strong"></a>
-						<div class="form-search"></div>
-						<form id="searchForm">
-					  		<input type="text" value="" name="search" placeholder="Search...">
-					    	<button type="submit" value=""><span class="ion-ios-search-strong"></span></button>
-					  	</form>
-					</div>	
+					</div><!-- /.container-fluid -->
+				</nav>
 
-					<div class="login login-button">
-						<a class="btn-primary" routerLink='/login'>Login</a>
-					</div><!-- .login -->
-				</div><!--. right-header -->
-			</div><!-- .container -->
-		</header><!-- .site-header -->
+				  
+				  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+					<!-- Wrapper for slides -->
+					<div class="carousel-inner" style="height:295px;"role="listbox">
+					  <div class="item active">
+						<img src="assets/images/header.png" alt="..." class="img-responsive">
+						<div class="carousel-caption">
+						  Caption 1
+						</div>
+					  </div>
+					</div>
+				  </div>
 
 		<main id="main" class="site-main">
-			<div class="page-title background-campaign" *ngIf="popular">
-				<div class="container">
-				<div class="col-md-2 col-xs-2 main-author">
-				<a class="main-author-icon"><img src="assets/images/aktiviti/admin.png" alt=""></a>
-				<div class="process-pledged"><span>by {{popular.organiser}}</span></div>
-				<div class="process-pledged"><span>5 Created</span></div>
-
-				</div>
-				<div class="col-md-10 col-xs-10 main-titlecampaign">
-				<h2>{{popular.campaign_name}}</h2>
-				<p>{{popular.description}}</p>
-				</div>
-					
-				</div>
-			</div><!-- .page-title -->
 		
-			<div class="campaign-content">
+			<div class="campaign-content" style="margin-top:96px">
 				<div class="container">
 					<div class="campaign">
 						<div class="campaign-item clearfix">
 							<div class="campaign-image">
-								<div id="myCarousel" class="carousel slide" data-ride="carousel">
+							<div id="myCarousel" class="carousel slide" data-ride="carousel">
 								<!-- Indicators -->
 								<ol class="carousel-indicators">
 								<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -90,46 +75,40 @@
 
 								<!-- Left and right controls -->
 								<a class="left carousel-control" href="#myCarousel" data-slide="prev">
-								<span class="glyphicon glyphicon-chevron-left"></span>
+								<span class="ion-ios-arrow-back"></span>
 								<span class="sr-only">Previous</span>
 								</a>
 								<a class="right carousel-control" href="#myCarousel" data-slide="next">
-								<span class="glyphicon glyphicon-chevron-right"></span>
+								<span class="ion-ios-arrow-forward"></span>
 								<span class="sr-only">Next</span>
 								</a>
 								</div>
 							</div>
-							<div class="campaign-box">
-								<div class="campaign-author clearfix">
+							<div class="campaign-box ml7" *ngIf="popular">
+								<div class="row cpl">
+									<h4>Kesihatan</h4>
+								</div>
+								<div class="row cpl">
+									<h1>{{popular.campaign_name}}</h1>
+								</div>
+								<div class="row cpl">
+									<h4>{{popular.short_desc}}</h4>
 								</div>
 								<div class="process">
 									<div class="raised"><span style="width: 255.297px;"></span></div>
-									<div class="main-process-info">
-										<div class="process-funded">$3,198</div>
-										<div class="process-pledgedescription">pledged of $4,000 goal</div>
-										<div class="process-numtotal">50</div>
-										<div class="process-description">Backers</div>
-										<div class="process-numtotal">10</div>
-										<div class="process-description">hours to go</div>
-										
-									</div>
 								</div>
-								<div class="button">
-									<form action="" id="priceForm" class="campaign-price quantity">
-										<input type="number" value="1" min="0" name="s" placeholder="">
-										<button class="btn-primary" type="submit">Back this Campaign</button>
-									</form>
-									<a href="#" class="btn-secondary"><i class="fa fa-heart" aria-hidden="true"></i>Remind me</a>
+								<div class="row cpl">
+									<h4 class="cplf"><span style="font-weight: bold">RM {{popular.fund_amount}}</span> terkumpul setakat ini</h4>
 								</div>
-								<div class="share">
-								<ul>
-									<li class="share-facebook"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-									<li class="share-twitter"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-									<li class="share-google-plus"><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-									<li class="share-linkedin"><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-									<li class="share-code"><a href="#"><i class="fa fa-code" aria-hidden="true"></i></a></li>
-								</ul>
-								<p>All or nothing. This project will only be funded if it reaches its goal by Sat, October 7 2017 10:15 PM AWST.</p>
+								<div class="row cpl">
+									<h4 class="cplf" ><span style="font-weight: bold">80%</span> tepati sasaran</h4>
+								</div>
+								<div class="row cpl">
+									<h4 class="cplf"><span style="font-weight: bold">5</span> hari lagi</h4>
+								</div>
+								<div class="row cpl2">
+									<button class="btn btn-secondary" routerLink="/donate">Derma</button>
+									<button class="btn btn-secondary ml2">Sebar</button>
 								</div>
 							</div>
 						</div>
@@ -142,138 +121,65 @@
 						<div class="col-md-12">
 							<div class="campaign-tabs">
 							<div class="main-navigation-details">
-							<div class="col-md-8 col-xs-8 main-nav">
-							<ul class="tabs-controls">
-									<li data-tab="campaign"><button>Campaign</button></li>
-									<li data-tab="faq" class="active"><button>FAQ</button></li>
-									<li data-tab="faq"><button>Updates</button></li>
-									<li data-tab="backer"><button>Comments</button></li>
-									<li data-tab="news"><button>News</button></li>
-								</ul>
-							</div>
-							<div class="col-md-4 col-xs-4 buttonshare">
-							<div class="sharing-path">
-							<a href="#" class="btn btn-back">Login</a>
-							<a href="#" class="btn-save"><i class="fa fa-heart" aria-hidden="true"></i>&nbsp;Share</a>
-							</div>
-							</div>
+								<div class="col-md-12 col-xs-12 main-nav">
+									<ul class="tabs-controls">
+										<li data-tab="overview" class="active"><button>Overview</button></li>
+										<li data-tab="komen"><button>Komen</button></li>
+										<li data-tab="faq"><button>Terkini</button></li>
+									</ul>
+								</div>
 							</div>
 								<div class="campaign-content">
-									<div id="campaign" class="tabs">
-										<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
-										<img src="./ideabox_files/campaign-tabs.jpg" alt="">
-										<p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment.</p>
-										<p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved</p>
-									</div>
-									<div id="news" class="tabs">
-										<section class="blank">
-											<div class="item-featured" *ngFor="let new of news">
-													<img src="{{new.image}}" alt="Image">
-												<div class="item-info">
-													<h1>{{new.title}}</h1>
-													<p>{{new.desc}}</p>
-												</div>
-												<br class="clear">
-											</div>
-										</section>
-									</div>
-									<div id="backer" class="tabs active">
-										<div class="field">
-			  								<p>
-			  									<input type="text" placeholder="Leave a message" [(ngModel)]="camp.textMsg" name="textMsg" #textMsg="ngModel" />
-			  								</p>
-			  								<p>
-    											<a class="btn-primary" (click)="postComment()">Post Comment</a>
-    										</p>
-			  							</div>
-
-			  							<div id="comment" class="comment-area" *ngFor="let com of comment">
-											<h3 class="comments-title"></h3>
-											<ol class="comments-list">
-												<li class="comment clearfix"> 
-													<div class="comment-body">
-													<div class="comment-avatar"><img src="./ideabox_files/comment.jpg" alt=""></div>
-													<div class="comment-info">
-														<header class="comment-meta"></header>
-														<cite class="comment-author">{{com.commenter.user}}</cite>
-														<div class="comment-inline">
-															<span class="comment-date">2 days ago</span>
-															<a href="https://demo.themegoals.com/html/ideabox/blog_details.html#" class="comment-reply">Reply</a>
-														</div>
-														<div class="comment-content"><p>{{com.desc}}</p></div>
-													</div>
-													</div>
-												</li>
-											</ol>
+									<div id="overview" class="tabs active" *ngIf="popular">
+										<div class="container cplf">
+											<p class="mt70">{{popular.description}}</p>
 										</div>
-
 									</div>
 									<div id="faq" class="tabs">
-										<h2>Frequently Asked Questions</h2>
-										<p>Looks like there aren't any frequently asked questions yet. Ask the project creator directly.</p>
-										<a href="https://demo.themegoals.com/html/ideabox/campaign_detail.html?s=1#" class="btn-primary">Ask a question</a>
-									</div>
-									<div id="updates" class="tabs">
-										<ul>
-											<li>
-												<p class="date">30-06-2017</p>
-												<h3>New Project Launches in Bangalore</h3>
-												<div class="desc"><p>Bacon spare ribs rump chuck turkey, ham hock capicola. Strip steak tongue kielbasa, boudin hamburger t-bone capicola turducken. Landjaeger meatloaf pork belly spare ribs chuck.</p></div>
-											</li>
-											<li>
-												<p class="date">31-05-2018</p>
-												<h3>Our First Office Start</h3>
-												<div class="desc"><p>Corned beef leberkas fatback porchetta, strip steak salami turkey short loin flank ham hock landjaeger. Leberkas pork belly kevin shoulder filet mignon. Bacon spare ribs rump chuck turkey, ham hock capicola. Strip steak tongue kielbasa, boudin hamburger t-bone capicola turducken. Landjaeger meatloaf pork belly spare ribs chuck.</p></div>
-											</li>
-											<li>
-												<p class="date">31-05-2018</p>
-												<h3>We Touch the Million Dollar Milestone</h3>
-												<div class="desc"><p>Corned beef leberkas fatback porchetta, strip steak salami turkey short loin flank ham hock landjaeger. Leberkas pork belly kevin shoulder filet mignon. Bacon spare ribs rump chuck turkey, ham hock capicola. Strip steak tongue kielbasa, boudin hamburger t-bone capicola turducken. Landjaeger meatloaf pork belly spare ribs chuck.</p></div>
-											</li>
-											<li>
-												<p class="date">31-05-2018</p>
-												<h3>Our Employee Reach 100 Person</h3>
-												<div class="desc"><p>Sed cursus hendrerit odio, at aliquet leo hendrerit a. Nulla ultricies sagittis dolor, quis maximus magna consectetur eu. Cras pharetra aliquam fringilla. Integer placerat sapien dapibus varius luctus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in aliquam urna, ultrices lobortis lacus. Praesent mi enim, congue semper volutpat ut, bibendum tempor arcu.</p></div>
-											</li>
-										</ul>
-									</div>
-									<div id="comment" class="tabs comment-area">
-										<h3 class="comments-title">1 Comment</h3>
-										<ol class="comments-list">
-											<li class="comment clearfix"> 
-												<div class="comment-body">
-													<div class="comment-avatar"><img src="./ideabox_files/comment.jpg" alt=""></div>
-													<div class="comment-info">
-														<header class="comment-meta"></header>
-														<cite class="comment-author">Jordan B. Goodale</cite>
-														<div class="comment-inline">
-															<span class="comment-date">2 days ago</span>
-															<a href="https://demo.themegoals.com/html/ideabox/campaign_detail.html?s=1#" class="comment-reply">Reply</a>
-														</div>
-														<div class="comment-content"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Equidem e Cn. Sequitur disserendi ratio cognitioque naturae; Nunc vides, quid faciat. Duo Reges: constructio interrete. Memini vero, inquam; Quis Aristidem non mortuum diligit?</p></div>
-													</div>
+										<div class="container">
+											<div class="row" style="margin-top:70px;">
+												<div class="timeline-item cplf" date-is='20-07-1990' *ngFor="let new of news">
+													<p>{{new.title}}</p>
+													<p>
+														{{new.desc}}
+													</p>
 												</div>
-											</li>
-										</ol>
-										<div id="respond" class="comment-respond">
-											<h3 id="reply-title" class="comment-reply-title">Leave A Comment?</h3>
-											<form action="https://demo.themegoals.com/html/ideabox/campaign_detail.html?s=1" id="commentForm">
-												<div class="field-textarea">
-								  					<textarea rows="8" placeholder="Your Comment"></textarea>
-								  				</div>
-												<div class="row">
-									  				<div class="col-md-4 field">
-									  					<input type="text" value="" name="s" placeholder="Your Name">
-									  				</div>
-									  				<div class="col-md-4 field">
-									  					<input type="text" value="" name="s" placeholder="Your Email">
-									  				</div>
-									  				<div class="col-md-4 field">
-									  					<input type="text" value="" name="s" placeholder="Website">
-									  				</div>
-								  				</div>
-											  	<button type="submit" value="Send Messager" class="btn-primary">Post Comment</button>
-											</form>
+											</div>
+										</div>
+									</div>
+									<div id="komen" class="tabs">
+										<div class="container" *ngFor="let com of comment">
+											<div class="row" style="margin-top:70px;">
+												<div class="col-md-1">
+													<img src="assets/images/test.png" class="img-circle">
+												</div>
+												<div class="col-md-11">
+													<h5 class="cplf "><span class="fwb">{{com.commenter.user}}</span> 4 minit yang lepas</h5>
+													<h5 class="cplf mt10">{{com.desc}}</h5>
+												</div>
+											</div>
+										</div>
+										<div class="container" >
+											<div class="row">
+												<div class="col-md-1">
+													<img src="assets/images/test.png" class="img-circle">
+												</div>
+												<div class="col-md-11">
+													<h5 class="cplf "><span class="fwb">Mohd Ady Rafli </span> 20 minit yang lepas</h5>
+													<h5 class="cplf mt10">Best lah</h5>
+												</div>
+											</div>
+										</div>
+										<div class="container">
+											<div class="row cplf">
+												Add Comments
+											</div>
+											<div class="row">
+												<input type="text" placeholder="Leave a message" [(ngModel)]="camp.textMsg" name="textMsg" #textMsg="ngModel" />
+											</div>
+											<div class="row">
+												<button class="btn btn-secondary bw mtw" (click)="postComment()">Submit</button>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -284,65 +190,48 @@
 			</div><!-- .campaign-history -->
 		</main><!-- .site-main -->
 
-		<footer id="footer" class="site-footer">
-			<div class="footer-menu hidden-dekstop">
+		<footer id="footer" class="bg-primary pt96 pb96">
 				<div class="container">
-					<div class="row">
-						<div class="col-md-5 col-xs-5">
-							<div class="footer-menu-item wow fadeInUp" data-wow-delay=".1s">
-								<h4>BERSAMA MEMBANTU MEREKA YANG MEMERLUKAN</h4>
-							</div>
+					<div class="row mb-64">
+						<div class="col-md-5 text-right text-left-xs wow fadeInUp" data-wow-delay=".1s">
+							<h2 class="uppercase bold italic">
+								BERSAMA MEMBANTU MEREKA YANG MEMERLUKAN
+							</h2>
 						</div>
-						<div class="col-md-2 col-xs-2">
-							<div class="footer-menu-item-center wow fadeInUp" data-wow-delay=".1s">
-							<i class="fa fa-heartbeat icon-lg"></i>
-							<img>
+						<div class="col-md-2 hidden-sm hidden-xs text-center pt48 wow fadeInUp" data-wow-delay=".1s">
+							<i class="icon display-block fa fa-heartbeat icon-lg">
 								
-							</div>
+							</i>
 						</div>
-						<div class="col-md-5 col-xs-5">
-							<div class="footer-menu-item-right wow fadeInUp" data-wow-delay=".1s">
-								<h3>Sebarang pertanyaan boleh dikemukan kepada Sekretariat kami melalui saluran dibawah:</h3>
-								<h2>tel: 03 2858 7637 <br/>email: admin@myprihatin.org.my</h2>
-								<div class="footer-submenu-item wow fadeInUp" data-wow-delay=".1s">
-								<h3><a href="http://fb.com/yayasanmyprihatin"><i class="fa fa-facebook-official"></i> YayasanMyPrihatin</a></h3>
-								<h3><a href="http://instagram.com/yayasanmyprihatin"><i class="fa fa-instagram"></i> @yayasanmyprihatin</a></h3>
-								</div>
-								
-							</div>
+						<div class="col-md-5 col-sm-6 wow fadeInUp" data-wow-delay=".1s">
+							<p class="lead">Sebarang pertanyaan boleh dikemukakan kepada Sekretariat kami melalui saluran dibawah:
+								<br>
+							</p>
+							<h4 class="mb8">
+								tel: 03 2858 7637
+								<br>
+							</h4>
+							<h4 class="mb8">
+								email: admin@myprihatin.org.my
+								<br>
+							</h4>
+							<h4 class="mb0">
+								<a href="http://fb.com/yayasanmyprihatin">
+									<i class="fa fa-facebook-official">
+									</i>
+									YayasanMyPrihatin
+								</a>
+							</h4>
+							<h4 class="mb0">
+								<a href="http://instagram.com/yayasanmyprihatin">
+									<i class="fa fa-instagram">
+									</i>
+									@yayasanmyprihatin
+								</a>
+							</h4>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="footer-menu hidden-mobile">
-				<div class="container">
-					<div class="row">
-						<div class="col-xs-12">
-							<div class="footer-menu-item wow fadeInUp" data-wow-delay=".1s">
-								<h4>Mobile BERSAMA MEMBANTU MEREKA YANG MEMERLUKAN</h4>
-							</div>
-						</div>
-						<div class="col-xs-12">
-							<div class="footer-menu-item-right wow fadeInUp" data-wow-delay=".1s">
-								<h3>Sebarang pertanyaan boleh dikemukan kepada Sekretariat kami melalui saluran dibawah:</h3>
-								<h2>tel: 03 2858 7637 <br/>email: admin@myprihatin.org.my</h2>
-								<div class="footer-submenu-item wow fadeInUp" data-wow-delay=".1s">
-								<h3><a href="http://fb.com/yayasanmyprihatin"><i class="fa fa-facebook-official"></i> YayasanMyPrihatin</a></h3>
-								<h3><a href="http://instagram.com/yayasanmyprihatin"><i class="fa fa-instagram"></i> @yayasanmyprihatin</a></h3>
-								</div>
-								
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- .footer-menu -->
-			<div class="footer-copyright">
-				<div class="container">
-					<p class="copyright">Yayasan MyPrihatin. All Rights Reserved.</p>
-					<a href="https://demo.themegoals.com/html/ideabox/#" class="back-top">Back to top<span class="ion-android-arrow-up"></span></a>
-				</div>
-			</div>
-		</footer><!-- site-footer -->
+			</footer><!-- site-footer -->
 	</div><!-- #wrapper -->
 </div>

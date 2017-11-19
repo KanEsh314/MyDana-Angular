@@ -11,6 +11,7 @@ import { AboutComponent } from '../pages/about/about.component';
 import { ProfileComponent } from '../pages/profile/profile.component';
 import { ArticlesComponent } from '../pages/articles/articles.component';
 import { ArticleDetailsComponent } from '../pages/article-details/article-details.component';
+import { DonateComponent } from '../pages/donate/donate.component';
 
 import { HttpService } from '../provider/http/http.service';
 import { AuthServiceLogin } from '../provider/auth/auth.service';
@@ -50,7 +51,8 @@ import { GoogleLoginProvider, FacebookLoginProvider } from "angular4-social-logi
     AboutComponent,
     ProfileComponent,
     ArticlesComponent,
-    ArticleDetailsComponent
+    ArticleDetailsComponent,
+    DonateComponent
   ],
   imports: [
     BrowserModule,

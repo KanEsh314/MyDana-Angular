@@ -1,155 +1,139 @@
 <div cz-shortcut-listen="true">
-	<div id="wrapper">
-		<header id="header" class="site-header">
-			<div class="container">
-				<div class="site-brand">
-					<a href="https://demo.themegoals.com/html/ideabox/index.html"><img src="./ideabox_files/logo.png" alt=""></a>
-				</div><!-- .site-brand -->
-				<div class="right-header">					
-					<nav class="main-menu">
-						<button class="c-hamburger c-hamburger--htx"><span></span></button>
-						<ul>
-							<li>
-								<a >Utama</a>
-							</li>
-							<li>
-								<a >Tentang Kami</a>
-							</li>
-							<li>
-								<a href="#">Program<i class="fa fa-caret-down" aria-hidden="true"></i></a>
-								<ul class="sub-menu">
-									<li><a href="#">Prihatin Kesihatan</a></li>
-									<li><a href="#">Prihatin Kasih</a></li>
-									<li><a href="#">Prihatin Amal</a></li>
-									<li><a href="#">Prihatin Komuniti</a></li>
-									<li><a href="#">Prihatin Ilmu</a></li>
-								</ul>
-							</li>
+	<div id="wrapper">				
+		<nav class="navbar navbar-default" >
+				<div class="container-fluid pl50 pr50">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a routerLink="/">
+						<img class="logo logo-light ml" alt="My Prihatin" src="assets/images/logo-light.png">
+					</a>
+					</div>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a routerLink="/about" style='color:white; font-family:"Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 11px'>MAKLUMAT</a></li>
+						<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style='color:white; font-family:"Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 11px'>PROGRAM <span class="caret"></span></a>
+						<ul class="dropdown-menu" style="background: #292929;">
+							<li><a href="#" class="dpd">PRIHATIN KESIHATAN</a></li>
+							<li><a href="#" class="dpd">PRIHATIN KASIH</a></li>
+							<li><a href="#" class="dpd">PRIHATIN AMAL</a></li>
+							<li><a href="#" class="dpd">PRIHATIN KOMUNITI</a></li>
+							<li><a href="#" class="dpd">PRIHATIN ILMU</a></li>
 						</ul>
-					</nav><!-- .main-menu -->
-					<div class="search-icon">
-						<a href="https://demo.themegoals.com/html/ideabox/#" class="ion-ios-search-strong"></a>
-						<div class="form-search"></div>
-						<form action="https://demo.themegoals.com/html/ideabox/#" method="POST" id="searchForm">
-					  		<input type="text" value="" name="search" placeholder="Search...">
-					    	<button type="submit" value=""><span class="ion-ios-search-strong"></span></button>
-					  	</form>
-					</div>	
-
-					<div class="login login-button">
-						<a class="btn-primary" routerLink="/login">Login</a>
-					</div><!-- .login -->
-				</div><!--. right-header -->
-			</div><!-- .container -->
-		</header><!-- .site-header -->
+						</li>
+					</ul>
+					</div><!-- /.navbar-collapse -->
+					
+			</nav>
+		</div><!-- /.container-fluid -->
 
 		<main id="main" class="site-signup">
-			<div class="page-title background-page">
-				<div class="container">
-					<h1>Signup</h1>
-					<div class="breadcrumbs">
-						<ul>
-							<li><a href="https://demo.themegoals.com/html/ideabox/index.html">Home</a><span>/</span></li>
-							<li>Signup</li>
-						</ul>
-					</div><!-- .breadcrumbs -->
-				</div>
-			</div><!-- .page-title -->
-			<div class="container-fluid box-login">
-			<div class="box-signup">
-			<div class="form-login">
-						<h2>Log in with your account</h2>
-						<form action="https://demo.themegoals.com/html/ideabox/s" method="POST" id="loginForm" class="clearfix">
-			  				<div class="field">
-			  					<input type="text" placeholder="Name" class="form-control" id="name" required [(ngModel)]="reg.name" name="name" #name="ngModel">
-			  				</div>
-			  				<div class="field">
-			  					<input type="text" placeholder="First Name" class="form-control" id="first_name" required [(ngModel)]="reg.first_name" name="first_name" #first_name="ngModel">
-			  				</div>
-			  				<div class="field">
-			  					<input type="text" placeholder="Last Name" class="form-control" id="lname" required [(ngModel)]="reg.last_name" name="last_name" #last_name="ngModel">
-			  				</div>
-							<div class="field">
-			  					<input type="email" placeholder="Email" class="form-control" id="email" required [(ngModel)]="reg.email" name="email" #email="ngModel">
-			  				</div>
-							<div class="field">
-			  					<input type="password" placeholder="Password" class="form-control" id="password" required [(ngModel)]="reg.password" name="password" #password="ngModel">
-			  				</div>
-			  				<div class="inline clearfix">
-						  		<button type="submit" value="Send Messager" class="btn-primary" (click)="getRegister()">Register</button>
-						  	</div>
-							<div class="inline clearfix">
-							<input type="checkbox" value="1" class="checkbox-signup">
-							<p class="signup-letter">Receive our weekly newsletter and other occasional updates</p>
-							</div>
-							<div class="inline clearfix">
-							</div>
-							
-					  	</form>
+			<div class="container box-login pb80">
+				<div class="box-signup">
+					<div class="row" style="text-align:center; margin-bottom:36px">
+						<p class="fs200" routerLink="/register">Daftar Masuk</p>
 					</div>
-			</div>
-			</div>
-		</main><!-- .site-main -->
-		<footer id="footer" class="site-footer">
-			<div class="footer-menu hidden-dekstop">
-				<div class="container">
 					<div class="row">
-						<div class="col-md-5 col-xs-5">
-							<div class="footer-menu-item wow fadeInUp" data-wow-delay=".1s">
-								<h4>BERSAMA MEMBANTU MEREKA YANG MEMERLUKAN</h4>
-							</div>
+						<div class="col-md-5">
+							<button class="btn btn-secondary" style="width:100%">Continue with Facebook</button>
 						</div>
-						<div class="col-md-2 col-xs-2">
-							<div class="footer-menu-item-center wow fadeInUp" data-wow-delay=".1s">
-							<i class="fa fa-heartbeat icon-lg"></i>
-							<img>
-								
-							</div>
+						<div class="col-md-2 taj10">
+							<h4>Atau</h4>
 						</div>
-						<div class="col-md-5 col-xs-5">
-							<div class="footer-menu-item-right wow fadeInUp" data-wow-delay=".1s">
-								<h3>Sebarang pertanyaan boleh dikemukan kepada Sekretariat kami melalui saluran dibawah:</h3>
-								<h2>tel: 03 2858 7637 <br/>email: admin@myprihatin.org.my</h2>
-								<div class="footer-submenu-item wow fadeInUp" data-wow-delay=".1s">
-								<h3><a href="http://fb.com/yayasanmyprihatin"><i class="fa fa-facebook-official"></i> YayasanMyPrihatin</a></h3>
-								<h3><a href="http://instagram.com/yayasanmyprihatin"><i class="fa fa-instagram"></i> @yayasanmyprihatin</a></h3>
-								</div>
-								
+						<div class="col-md-5">
+							<div class="field">
+								<input name="email" placeholder="Email" type="email">
 							</div>
+							<div class="field" style="margin-top:10px; margin-bottom:10px;">
+								<input name="password" placeholder="Password" type="text">
+							</div>
+							<button class="btn btn-secondary" style="width:100%">Login</button>
 						</div>
 					</div>
-				</div>
-			</div>
-			<div class="footer-menu hidden-mobile">
-				<div class="container">
+					<div class="row" style="text-align:center; margin-bottom:50px; margin-top:50px">
+						<p class="fs200">Akaun Baru</p>
+					</div>
 					<div class="row">
-						<div class="col-xs-12">
-							<div class="footer-menu-item wow fadeInUp" data-wow-delay=".1s">
-								<h4>Mobile BERSAMA MEMBANTU MEREKA YANG MEMERLUKAN</h4>
-							</div>
+						<div class="col-md-5">
+							<button class="btn btn-secondary" style="width:100%">Continue with Facebook</button>
+							<p class="tam10">By clicking Register me, you indicate you have read and understand our Privacy Policy and Terms of Use and represent
+								that you are at least 13 years of age</p>
 						</div>
-						<div class="col-xs-12">
-							<div class="footer-menu-item-right wow fadeInUp" data-wow-delay=".1s">
-								<h3>Sebarang pertanyaan boleh dikemukan kepada Sekretariat kami melalui saluran dibawah:</h3>
-								<h2>tel: 03 2858 7637 <br/>email: admin@myprihatin.org.my</h2>
-								<div class="footer-submenu-item wow fadeInUp" data-wow-delay=".1s">
-								<h3><a href="http://fb.com/yayasanmyprihatin"><i class="fa fa-facebook-official"></i> YayasanMyPrihatin</a></h3>
-								<h3><a href="http://instagram.com/yayasanmyprihatin"><i class="fa fa-instagram"></i> @yayasanmyprihatin</a></h3>
-								</div>
-								
+						<div class="col-md-2 taj10">
+							<h4>Atau</h4>
+						</div>
+						<div class="col-md-5">
+							<div class="field">
+								<input type="text" placeholder="First Name" class="form-control" id="first_name" required [(ngModel)]="reg.first_name" name="first_name" #first_name="ngModel">
 							</div>
+							<div class="field" style="margin-top:10px; margin-bottom:10px;">
+								<input type="text" placeholder="Last Name" class="form-control" id="lname" required [(ngModel)]="reg.last_name" name="last_name" #last_name="ngModel">
+							</div>
+							<div class="field" style="margin-top:10px; margin-bottom:10px;">
+								<input type="text" placeholder="Name" class="form-control" id="name" required [(ngModel)]="reg.name" name="name" #name="ngModel">
+							</div>
+							<div class="field" style="margin-top:10px; margin-bottom:10px;">
+								<input type="email" placeholder="Email" class="form-control" id="email" required [(ngModel)]="reg.email" name="email" #email="ngModel">
+							</div>
+							<div class="field" style="margin-top:10px; margin-bottom:10px;">
+								<input type="password" placeholder="Password" class="form-control" id="password" required [(ngModel)]="reg.password" name="password" #password="ngModel">
+							</div>
+							<button class="btn btn-secondary" style="width:100%" (click)="getRegister()">Register</button>
+							<p class="tam10">By clicking Register me, you indicate you have read and understand our Privacy Policy and Terms of Use and represent
+								that you are at least 13 years of age</p>
 						</div>
 					</div>
 				</div>
 			</div>
-			<!-- .footer-menu -->
-			<div class="footer-copyright">
+		</main>
+		<!-- .site-main -->
+		<footer id="footer" class="bg-primary pt96 pb96">
 				<div class="container">
-					<p class="copyright">Yayasan MyPrihatin. All Rights Reserved.</p>
-					<a href="https://demo.themegoals.com/html/ideabox/#" class="back-top">Back to top<span class="ion-android-arrow-up"></span></a>
+					<div class="row mb-64">
+						<div class="col-md-5 text-right text-left-xs wow fadeInUp" data-wow-delay=".1s">
+							<h2 class="uppercase bold italic">
+								BERSAMA MEMBANTU MEREKA YANG MEMERLUKAN
+							</h2>
+						</div>
+						<div class="col-md-2 hidden-sm hidden-xs text-center pt48 wow fadeInUp" data-wow-delay=".1s">
+							<i class="icon display-block fa fa-heartbeat icon-lg">
+								
+							</i>
+						</div>
+						<div class="col-md-5 col-sm-6 wow fadeInUp" data-wow-delay=".1s">
+							<p class="lead">Sebarang pertanyaan boleh dikemukakan kepada Sekretariat kami melalui saluran dibawah:
+								<br>
+							</p>
+							<h4 class="mb8">
+								tel: 03 2858 7637
+								<br>
+							</h4>
+							<h4 class="mb8">
+								email: admin@myprihatin.org.my
+								<br>
+							</h4>
+							<h4 class="mb0">
+								<a href="http://fb.com/yayasanmyprihatin">
+									<i class="fa fa-facebook-official">
+									</i>
+									YayasanMyPrihatin
+								</a>
+							</h4>
+							<h4 class="mb0">
+								<a href="http://instagram.com/yayasanmyprihatin">
+									<i class="fa fa-instagram">
+									</i>
+									@yayasanmyprihatin
+								</a>
+							</h4>
+						</div>
+					</div>
 				</div>
-			</div>
-		</footer><!-- site-footer -->
+			</footer><!-- site-footer -->
 
 	</div><!-- #wrapper -->
-</div>

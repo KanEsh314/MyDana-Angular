@@ -11,6 +11,7 @@ import { AboutComponent } from '../pages/about/about.component';
 import { ProfileComponent } from '../pages/profile/profile.component';
 import { ArticlesComponent } from '../pages/articles/articles.component';
 import { ArticleDetailsComponent } from '../pages/article-details/article-details.component';
+import { DonateComponent } from '../pages/donate/donate.component';
 
 const routes : Routes = [
 	{ path : '', redirectTo: 'home', pathMatch: 'full' },
@@ -22,7 +23,8 @@ const routes : Routes = [
 	{ path : 'about', component: AboutComponent },
 	{ path : 'profile', component: ProfileComponent },
 	{ path : 'article', component: ArticlesComponent },
-	{ path : 'articledetail', component: ArticleDetailsComponent }
+	{ path : 'articledetail', component: ArticleDetailsComponent },
+	{ path : 'donate', component: DonateComponent }
 	];
 
 	@NgModule({
