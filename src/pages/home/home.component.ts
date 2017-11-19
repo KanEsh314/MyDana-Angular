@@ -22,6 +22,7 @@ export class HomeComponent implements OnInit {
   	this.httpServices.getBanner()
     .subscribe(data => {
       this.banners = data.data;
+      console.log(this.banners);
     }, (err) => {
       console.log(err);
     });
@@ -30,7 +31,7 @@ export class HomeComponent implements OnInit {
     this.httpServices.getLatest()
     .subscribe(data => {
       this.latests = data.data;
-      //console.log(this.latest);
+      console.log(this.latests);
     }, (err) => {
       console.log(err);
     });

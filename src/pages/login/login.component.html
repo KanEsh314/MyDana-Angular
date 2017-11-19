@@ -1,160 +1,105 @@
-<div cz-shortcut-listen="true">
-	<div id="wrapper">
-		<header id="header" class="site-header">
+<div>
+	<nav class="navbar navbar-default">
+		<div class="container-fluid pl50 pr50">
+		  <!-- Brand and toggle get grouped for better mobile display -->
+		  <div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			  <span class="sr-only">Toggle navigation</span>
+			  <span class="icon-bar"></span>
+			  <span class="icon-bar"></span>
+			  <span class="icon-bar"></span>
+			</button>
+			<a routerLink="/">
+				<img class="logo logo-light ml" alt="My Prihatin" src="assets/images/logo-light.png">
+			</a>
+		  </div>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a routerLink="/about" style='color:white; font-family:"Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 11px'>MAKLUMAT</a></li>
+			  <li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style='color:white; font-family:"Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 11px'>PROGRAM <span class="caret"></span></a>
+				<ul class="dropdown-menu" style="background: #292929;">
+				  <li><a href="#" class="dpd">PRIHATIN KESIHATAN</a></li>
+				  <li><a href="#" class="dpd">PRIHATIN KASIH</a></li>
+				  <li><a href="#" class="dpd">PRIHATIN AMAL</a></li>
+					<li><a href="#" class="dpd">PRIHATIN KOMUNITI</a></li>
+					<li><a href="#" class="dpd">PRIHATIN ILMU</a></li>
+				</ul>
+				</li>
+				<li><a routerLink="/register" class="fc">DAFTAR</a></li>
+			</ul>
+		</div><!-- /.container-fluid -->
+	</nav>
+	
+	<!--Top navbar-->
+
+
+			<section class="pb125">
+				<div class="container">
+					<div class="row text-center">
+						<div class="row tac">
+							<p class="fs200">Log Masuk</p>
+						</div>
+						<div class="row tac">
+							<button class="btn btn-secondary w25" (click)="getFBLogged()">Log Masuk dengan Facebook</button>
+						</div>
+						<div class="row tac">
+							<p class="fs200">Atau</p>
+						</div>
+						<div class="field ml375 w25">
+							<input placeholder="Email" type="email" class="form-control" id="name" required [(ngModel)]="model.name" name="name" #name="ngModel">
+						</div>
+						<div class="field ml375 w25">
+							<input placeholder="Password" type="password" class="form-control" id="password" required [(ngModel)]="model.password" name="password" #password="ngModel">
+						</div>
+						<div class="row tac">
+							<button class="btn btn-secondary w25" (click)="getLogged()">Log Masuk</button>
+						</div>
+					</div>
+				</div>
+			</section>
+			<br/>
+
+		<footer id="footer" class="bg-primary pt96 pb96">
 			<div class="container">
-				<div class="site-brand">
-					<a href="https://demo.themegoals.com/html/ideabox/index.html"><img src="./ideabox_files/logo.png" alt=""></a>
-				</div><!-- .site-brand -->
-				<div class="right-header">					
-					<nav class="main-menu">
-						<button class="c-hamburger c-hamburger--htx"><span></span></button>
-						<ul>
-							<li>
-								<a routerLink="/">Utama</a>
-							</li>
-							<li>
-								<a routerLink="/about">Tentang Kami</a>
-							</li>
-							<li>
-								<a href="#">Program<i class="fa fa-caret-down" aria-hidden="true"></i></a>
-								<ul class="sub-menu">
-									<li><a href="#">Prihatin Kesihatan</a></li>
-									<li><a href="#">Prihatin Kasih</a></li>
-									<li><a href="#">Prihatin Amal</a></li>
-									<li><a href="#">Prihatin Komuniti</a></li>
-									<li><a href="#">Prihatin Ilmu</a></li>
-								</ul>
-							</li>
-						</ul>
-					</nav><!-- .main-menu -->
-					<div class="search-icon">
-						<a href="https://demo.themegoals.com/html/ideabox/#" class="ion-ios-search-strong"></a>
-						<div class="form-search"></div>
-						<form action="https://demo.themegoals.com/html/ideabox/#" method="POST" id="searchForm">
-					  		<input type="text" value="" name="search" placeholder="Search...">
-					    	<button type="submit" value=""><span class="ion-ios-search-strong"></span></button>
-					  	</form>
-					</div>	
-
-					<div class="login login-button">
-						<a class="btn-primary" routerLink="/login" >Login</a>
-					</div><!-- .login -->
-					<div class="login login-button" *ngIf="user">
-            			<a class="btn-primary">{{user.name}}</a>
-        			</div>
-					<div class="login login-button" *ngIf="user">
-						<a class="btn-primary" (click)="logOut()">Log Out</a>
-					</div><!-- .login -->
-				</div><!--. right-header -->
-			</div><!-- .container -->
-		</header><!-- .site-header -->
-
-		<main id="main" class="site-signup">
-			<div class="page-title background-page">
-				<div class="container">
-					<h1>Login</h1>
-					<div class="breadcrumbs">
-						<ul>
-							<li><a href="https://demo.themegoals.com/html/ideabox/index.html">Home</a><span>/</span></li>
-							<li>Login</li>
-						</ul>
-					</div><!-- .breadcrumbs -->
-				</div>
-			</div><!-- .page-title -->
-			<div class="container-fluid box-login">
-			<div class="box-signup">
-					<div class="form-login">
-						<h2>Log in with your account</h2>
-
-						<form class="clearfix">
-			  				<div class="field" name="form">
-			  					<input placeholder="Username" type="text" class="form-control" id="name" required [(ngModel)]="model.name" name="name" #name="ngModel">
-			  				</div>
-			  				<div class="field">
-			  					<input placeholder="Password" type="password" class="form-control" id="password" required [(ngModel)]="model.password" name="password" #password="ngModel">
-								<a href="https://demo.themegoals.com/html/ideabox/register.html">Forgot your password?</a>
-								
-			  				</div>
-			  				<div class="inline clearfix">
-						  		<button type="submit" value="Login" class="btn-primary" (click)="getLogged()">Login</button>
-						  	</div>
-						  	<div class="inline clearfix">
-						  		<button type="submit" value="FBLogin" class="btn-primary" (click)="getFBLogged()">Log With Facebook</button>
-						  	</div>
-						  	<div class="inline clearfix">
-						  		<button type="submit" value="FBLogin" class="btn-primary" (click)="getGLogged()">Log With Google+</button>
-						  	</div>
-							<div class="inline clearfix">
-							<p>Not a member yet? <a routerLink="/register">Register Now</a></p>
-							</div>
-							<div class="inline clearfix">
-							</div>
-					  	</form>
-
+				<div class="row mb-64">
+					<div class="col-md-5 text-right text-left-xs wow fadeInUp" data-wow-delay=".1s">
+						<h2 class="uppercase bold italic">
+							BERSAMA MEMBANTU MEREKA YANG MEMERLUKAN
+						</h2>
 					</div>
-			</div>
-			</div>	
-		</main><!-- .site-main -->
-		<footer id="footer" class="site-footer">
-			<div class="footer-menu hidden-dekstop">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-5 col-xs-5">
-							<div class="footer-menu-item wow fadeInUp" data-wow-delay=".1s">
-								<h4>BERSAMA MEMBANTU MEREKA YANG MEMERLUKAN</h4>
-							</div>
-						</div>
-						<div class="col-md-2 col-xs-2">
-							<div class="footer-menu-item-center wow fadeInUp" data-wow-delay=".1s">
-							<i class="fa fa-heartbeat icon-lg"></i>
-							<img>
-								
-							</div>
-						</div>
-						<div class="col-md-5 col-xs-5">
-							<div class="footer-menu-item-right wow fadeInUp" data-wow-delay=".1s">
-								<h3>Sebarang pertanyaan boleh dikemukan kepada Sekretariat kami melalui saluran dibawah:</h3>
-								<h2>tel: 03 2858 7637 <br/>email: admin@myprihatin.org.my</h2>
-								<div class="footer-submenu-item wow fadeInUp" data-wow-delay=".1s">
-								<h3><a href="http://fb.com/yayasanmyprihatin"><i class="fa fa-facebook-official"></i> YayasanMyPrihatin</a></h3>
-								<h3><a href="http://instagram.com/yayasanmyprihatin"><i class="fa fa-instagram"></i> @yayasanmyprihatin</a></h3>
-								</div>
-								
-							</div>
-						</div>
+					<div class="col-md-2 hidden-sm hidden-xs text-center pt48 wow fadeInUp" data-wow-delay=".1s">
+						<i class="icon display-block fa fa-heartbeat icon-lg">
+							
+						</i>
 					</div>
-				</div>
-			</div>
-			<div class="footer-menu hidden-mobile">
-				<div class="container">
-					<div class="row">
-						<div class="col-xs-12">
-							<div class="footer-menu-item wow fadeInUp" data-wow-delay=".1s">
-								<h4>Mobile BERSAMA MEMBANTU MEREKA YANG MEMERLUKAN</h4>
-							</div>
-						</div>
-						<div class="col-xs-12">
-							<div class="footer-menu-item-right wow fadeInUp" data-wow-delay=".1s">
-								<h3>Sebarang pertanyaan boleh dikemukan kepada Sekretariat kami melalui saluran dibawah:</h3>
-								<h2>tel: 03 2858 7637 <br/>email: admin@myprihatin.org.my</h2>
-								<div class="footer-submenu-item wow fadeInUp" data-wow-delay=".1s">
-								<h3><a href="http://fb.com/yayasanmyprihatin"><i class="fa fa-facebook-official"></i> YayasanMyPrihatin</a></h3>
-								<h3><a href="http://instagram.com/yayasanmyprihatin"><i class="fa fa-instagram"></i> @yayasanmyprihatin</a></h3>
-								</div>
-								
-							</div>
-						</div>
+					<div class="col-md-5 col-sm-6 wow fadeInUp" data-wow-delay=".1s">
+						<p class="lead">Sebarang pertanyaan boleh dikemukakan kepada Sekretariat kami melalui saluran dibawah:
+							<br>
+						</p>
+						<h4 class="mb8">
+							tel: 03 2858 7637
+							<br>
+						</h4>
+						<h4 class="mb8">
+							email: admin@myprihatin.org.my
+							<br>
+						</h4>
+						<h4 class="mb0">
+							<a href="http://fb.com/yayasanmyprihatin">
+								<i class="fa fa-facebook-official">
+								</i>
+								YayasanMyPrihatin
+							</a>
+						</h4>
+						<h4 class="mb0">
+							<a href="http://instagram.com/yayasanmyprihatin">
+								<i class="fa fa-instagram">
+								</i>
+								@yayasanmyprihatin
+							</a>
+						</h4>
 					</div>
-				</div>
-			</div>
-			<!-- .footer-menu -->
-			<div class="footer-copyright">
-				<div class="container">
-					<p class="copyright">Yayasan MyPrihatin. All Rights Reserved.</p>
-					<a href="https://demo.themegoals.com/html/ideabox/#" class="back-top">Back to top<span class="ion-android-arrow-up"></span></a>
 				</div>
 			</div>
 		</footer><!-- site-footer -->
-
-	</div><!-- #wrapper -->
 </div>

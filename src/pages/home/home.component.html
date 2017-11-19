@@ -25,7 +25,7 @@
 					<li><a href="#" class="dpd">PRIHATIN ILMU</a></li>
 				</ul>
 			  </li>
-			  <li><a href="login.htm" class="fc">DAFTAR MASUK</a></li>
+			  <li><a routerLink="/register" class="fc">DAFTAR MASUK</a></li>
 			</ul>
 		</div><!-- /.container-fluid -->
 	</nav>
@@ -67,80 +67,20 @@
 						<h4 class="uppercase mb80 f40">KEMPEN TERKINI</h4>
 						<div class="col-sm-6 col-md-4" *ngFor="let latest of latests">
 							<div class="campaign-item wow fadeInUp" data-wow-delay=".1s">
-								<a class="overlay" href="campaignlist.htm">
-									<img src="assets/images/aktiviti/aktiviti01.jpg" alt="">
+								<a class="overlay" (click)="getCampaign(latest.campaign_id)">
+									<img src="{{latest.campaign_image}}" alt="">
 									<span class="ion-ios-search-strong"></span>
 								</a>
 								<div class="campaign-box">
 									<a href="https://demo.themegoals.com/html/ideabox/#" class="category">Aktiviti Kemasyarakatan</a>
-									<h3><a href="https://demo.themegoals.com/html/ideabox/campaign_detail.html">PRIHATIN KESIHATAN</a></h3>
-									<div class="campaign-description">Aktiviti teras dan utama MyPrihatin dalam membantu pesakit kronik. Kerjasama erat MyPrihatin bersama Yayasan IJN dan PPUKM.</div>
+									<h3><a href="https://demo.themegoals.com/html/ideabox/campaign_detail.html">{{latest.campaign_name}}</a></h3>
+									<div class="campaign-description">{{latest.short_desc}}</div>
 									<div class="process">
 										<div class="raised"><span style="width: 142.594px;"></span></div>
 									</div>
 									<div style="text-align: left">
 										<p>
-											<span style="font-weight:600">RM 4,890</span> terkumpul setakat ini</p>
-										<p>
-											<span style="font-weight:600">80%</span> tepati sasaran</p>
-										<p>
-											<span style="font-weight:600">5</span> hari lagi</p>
-									</div>
-									<hr>
-									<div class="row" style="padding:0">
-										<div class="col-md-4"><i class="fa fa-comment" aria-hidden="true"></i><span> 123</span></div>
-										<div class="col-md-4"><i class="fa fa-eye" aria-hidden="true"></i><span> 123</span></div>
-										<div class="col-md-4" style="text-align:right"><i class="fa fa-share" aria-hidden="true"></i></div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-6 col-md-4">
-							<div class="campaign-item wow fadeInUp" data-wow-delay=".1s">
-								<a class="overlay" href="campaignlist.htm">
-									<img src="assets/images/aktiviti/aktiviti01.jpg" alt="">
-									<span class="ion-ios-search-strong"></span>
-								</a>
-								<div class="campaign-box">
-									<a href="https://demo.themegoals.com/html/ideabox/#" class="category">Aktiviti Kemasyarakatan</a>
-									<h3><a href="https://demo.themegoals.com/html/ideabox/campaign_detail.html">PRIHATIN KESIHATAN</a></h3>
-									<div class="campaign-description">Aktiviti teras dan utama MyPrihatin dalam membantu pesakit kronik. Kerjasama erat MyPrihatin bersama Yayasan IJN dan PPUKM.</div>
-									<div class="process">
-										<div class="raised"><span style="width: 142.594px;"></span></div>
-									</div>
-									<div style="text-align: left">
-										<p>
-											<span style="font-weight:600">RM 4,890</span> terkumpul setakat ini</p>
-										<p>
-											<span style="font-weight:600">80%</span> tepati sasaran</p>
-										<p>
-											<span style="font-weight:600">5</span> hari lagi</p>
-									</div>
-									<hr>
-									<div class="row" style="padding:0">
-										<div class="col-md-4"><i class="fa fa-comment" aria-hidden="true"></i><span> 123</span></div>
-										<div class="col-md-4"><i class="fa fa-eye" aria-hidden="true"></i><span> 123</span></div>
-										<div class="col-md-4" style="text-align:right"><i class="fa fa-share" aria-hidden="true"></i></div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-6 col-md-4">
-							<div class="campaign-item wow fadeInUp" data-wow-delay=".1s">
-								<a class="overlay" href="campaignlist.htm">
-									<img src="assets/images/aktiviti/aktiviti01.jpg" alt="">
-									<span class="ion-ios-search-strong"></span>
-								</a>
-								<div class="campaign-box">
-									<a href="https://demo.themegoals.com/html/ideabox/#" class="category">Aktiviti Kemasyarakatan</a>
-									<h3><a href="https://demo.themegoals.com/html/ideabox/campaign_detail.html">PRIHATIN KESIHATAN</a></h3>
-									<div class="campaign-description">Aktiviti teras dan utama MyPrihatin dalam membantu pesakit kronik. Kerjasama erat MyPrihatin bersama Yayasan IJN dan PPUKM.</div>
-									<div class="process">
-										<div class="raised"><span style="width: 142.594px;"></span></div>
-									</div>
-									<div style="text-align: left">
-										<p>
-											<span style="font-weight:600">RM 4,890</span> terkumpul setakat ini</p>
+											<span style="font-weight:600">RM {{latest.total_amount}}</span> terkumpul setakat ini</p>
 										<p>
 											<span style="font-weight:600">80%</span> tepati sasaran</p>
 										<p>
