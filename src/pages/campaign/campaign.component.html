@@ -175,7 +175,7 @@
 												Add Comments
 											</div>
 											<div class="row">
-												<input type="text" placeholder="Leave a message" [(ngModel)]="camp.textMsg" name="textMsg" #textMsg="ngModel" />
+												<textarea rows="4" cols="155" type="text" placeholder="Leave a message" [(ngModel)]="camp.textMsg" name="textMsg" #textMsg="ngModel"></textarea>
 											</div>
 											<div class="row">
 												<button class="btn btn-secondary bw mtw" (click)="postComment()">Submit</button>
